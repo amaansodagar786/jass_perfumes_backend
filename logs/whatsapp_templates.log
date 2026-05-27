@@ -1,0 +1,1599 @@
+
+[2026-05-19T10:07:24.799Z] 📡 META API CALL: GET https://graph.facebook.com/v23.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T10:07:25.380Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v23.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T10:08:08.836Z] 🚀 UPLOAD MEDIA
+================================================================================
+[2026-05-19T10:08:09.712Z] ✅ Media ID: 1564764078400518
+================================================================================
+[2026-05-19T10:08:10.132Z] ✅ Media URL: https://lookaside.fbsbx.com/whatsapp_business/attachments/?mid=1564764078400518&source=getMedia&ext=1779185590&hash=ARmtmYZnkQ07lWZUsJmJZoaa_R0x1zI5FlLS28Q8VMixZQ
+================================================================================
+[2026-05-19T10:08:28.094Z] 🚀 CREATE TEMPLATE
+================================================================================
+[2026-05-19T10:08:28.094Z] 📋 REQUEST BODY:
+{
+  "name": "jass_test",
+  "category": "UTILITY",
+  "language": "en",
+  "bodyText": "HEY MEET BOT",
+  "footerText": null,
+  "headerType": "IMAGE",
+  "headerText": null,
+  "headerMediaUrl": "https://lookaside.fbsbx.com/whatsapp_business/attachments/?mid=1564764078400518&source=getMedia&ext=1779185590&hash=ARmtmYZnkQ07lWZUsJmJZoaa_R0x1zI5FlLS28Q8VMixZQ"
+}
+================================================================================
+[2026-05-19T10:08:28.095Z] 📤 SENDING TO META:
+{
+  "name": "jass_test",
+  "category": "UTILITY",
+  "language": "en",
+  "components": [
+    {
+      "type": "HEADER",
+      "format": "IMAGE",
+      "example": {
+        "header_handle": [
+          "https://lookaside.fbsbx.com/whatsapp_business/attachments/?mid=1564764078400518&source=getMedia&ext=1779185590&hash=ARmtmYZnkQ07lWZUsJmJZoaa_R0x1zI5FlLS28Q8VMixZQ"
+        ]
+      }
+    },
+    {
+      "type": "BODY",
+      "text": "HEY MEET BOT"
+    }
+  ]
+}
+================================================================================
+[2026-05-19T10:08:28.096Z] 📡 META API CALL: POST https://graph.facebook.com/v23.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T10:08:28.836Z] ❌ META API ERROR: POST https://graph.facebook.com/v23.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T10:08:28.837Z] 🚨 DETAILS:
+{
+  "error": {
+    "message": "Invalid parameter",
+    "type": "OAuthException",
+    "code": 100,
+    "error_subcode": 2388273,
+    "is_transient": false,
+    "error_user_title": "Missing sample parameter for title type",
+    "error_user_msg": "Templates with IMAGE header type need an example/sample, but it was not provided. Please update the title type or provide a valid example parameter.",
+    "fbtrace_id": "AXxAFD8FtC9KxFGA2L8JHPh"
+  }
+}
+================================================================================
+[2026-05-19T10:08:28.837Z] ❌ FAILED: jass_test
+================================================================================
+[2026-05-19T10:08:40.144Z] 🚀 CREATE TEMPLATE
+================================================================================
+[2026-05-19T10:08:40.145Z] 📋 REQUEST BODY:
+{
+  "name": "jass_test",
+  "category": "UTILITY",
+  "language": "en",
+  "bodyText": "HEY MEET BOT",
+  "footerText": "jass perfumes ",
+  "headerType": "IMAGE",
+  "headerText": null,
+  "headerMediaUrl": "https://lookaside.fbsbx.com/whatsapp_business/attachments/?mid=1564764078400518&source=getMedia&ext=1779185590&hash=ARmtmYZnkQ07lWZUsJmJZoaa_R0x1zI5FlLS28Q8VMixZQ"
+}
+================================================================================
+[2026-05-19T10:08:40.148Z] 📤 SENDING TO META:
+{
+  "name": "jass_test",
+  "category": "UTILITY",
+  "language": "en",
+  "components": [
+    {
+      "type": "HEADER",
+      "format": "IMAGE",
+      "example": {
+        "header_handle": [
+          "https://lookaside.fbsbx.com/whatsapp_business/attachments/?mid=1564764078400518&source=getMedia&ext=1779185590&hash=ARmtmYZnkQ07lWZUsJmJZoaa_R0x1zI5FlLS28Q8VMixZQ"
+        ]
+      }
+    },
+    {
+      "type": "BODY",
+      "text": "HEY MEET BOT"
+    },
+    {
+      "type": "FOOTER",
+      "text": "jass perfumes "
+    }
+  ]
+}
+================================================================================
+[2026-05-19T10:08:40.149Z] 📡 META API CALL: POST https://graph.facebook.com/v23.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T10:08:41.192Z] ❌ META API ERROR: POST https://graph.facebook.com/v23.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T10:08:41.193Z] 🚨 DETAILS:
+{
+  "error": {
+    "message": "Invalid parameter",
+    "type": "OAuthException",
+    "code": 100,
+    "error_subcode": 2388273,
+    "is_transient": false,
+    "error_user_title": "Missing sample parameter for title type",
+    "error_user_msg": "Templates with IMAGE header type need an example/sample, but it was not provided. Please update the title type or provide a valid example parameter.",
+    "fbtrace_id": "AjShUQu3D-9jgpY67koWlOL"
+  }
+}
+================================================================================
+[2026-05-19T10:08:41.193Z] ❌ FAILED: jass_test
+================================================================================
+[2026-05-19T10:09:43.906Z] 🚀 CREATE TEMPLATE
+================================================================================
+[2026-05-19T10:09:43.907Z] 📋 REQUEST BODY:
+{
+  "name": "jass_test",
+  "category": "MARKETING",
+  "language": "en",
+  "bodyText": "HEY MEET BOT",
+  "footerText": "jass perfumes ",
+  "headerType": "IMAGE",
+  "headerText": null,
+  "headerMediaUrl": "https://lookaside.fbsbx.com/whatsapp_business/attachments/?mid=1564764078400518&source=getMedia&ext=1779185590&hash=ARmtmYZnkQ07lWZUsJmJZoaa_R0x1zI5FlLS28Q8VMixZQ"
+}
+================================================================================
+[2026-05-19T10:09:43.909Z] 📤 SENDING TO META:
+{
+  "name": "jass_test",
+  "category": "MARKETING",
+  "language": "en",
+  "components": [
+    {
+      "type": "HEADER",
+      "format": "IMAGE",
+      "example": {
+        "header_handle": [
+          "https://lookaside.fbsbx.com/whatsapp_business/attachments/?mid=1564764078400518&source=getMedia&ext=1779185590&hash=ARmtmYZnkQ07lWZUsJmJZoaa_R0x1zI5FlLS28Q8VMixZQ"
+        ]
+      }
+    },
+    {
+      "type": "BODY",
+      "text": "HEY MEET BOT"
+    },
+    {
+      "type": "FOOTER",
+      "text": "jass perfumes "
+    }
+  ]
+}
+================================================================================
+[2026-05-19T10:09:43.909Z] 📡 META API CALL: POST https://graph.facebook.com/v23.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T10:09:45.533Z] ❌ META API ERROR: POST https://graph.facebook.com/v23.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T10:09:45.534Z] 🚨 DETAILS:
+{
+  "error": {
+    "message": "Invalid parameter",
+    "type": "OAuthException",
+    "code": 100,
+    "error_subcode": 2388273,
+    "is_transient": false,
+    "error_user_title": "Missing sample parameter for title type",
+    "error_user_msg": "Templates with IMAGE header type need an example/sample, but it was not provided. Please update the title type or provide a valid example parameter.",
+    "fbtrace_id": "AguQrUuvkkT5YyhLIn_TZPu"
+  }
+}
+================================================================================
+[2026-05-19T10:09:45.534Z] ❌ FAILED: jass_test
+================================================================================
+[2026-05-19T10:14:42.797Z] 📡 META API CALL: GET https://graph.facebook.com/v23.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T10:14:43.337Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v23.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T10:14:59.877Z] 📡 META API CALL: GET https://graph.facebook.com/v23.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T10:15:00.313Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v23.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T10:15:21.533Z] 🚀 UPLOAD MEDIA (RESUMABLE)
+================================================================================
+[2026-05-19T10:15:21.833Z] 🔥 ERROR in upload-media: Request failed with status code 400
+================================================================================
+[2026-05-19T10:15:21.834Z] 📚 Full error:
+{
+  "error": {
+    "message": "Unsupported post request. Object with ID '1040035579202652' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api",
+    "type": "GraphMethodException",
+    "code": 100,
+    "error_subcode": 33,
+    "fbtrace_id": "Acq85eBJ0qDGe1nsLGizue9"
+  }
+}
+================================================================================
+[2026-05-19T10:15:37.945Z] 🚀 UPLOAD MEDIA (RESUMABLE)
+================================================================================
+[2026-05-19T10:15:38.243Z] 🔥 ERROR in upload-media: Request failed with status code 400
+================================================================================
+[2026-05-19T10:15:38.243Z] 📚 Full error:
+{
+  "error": {
+    "message": "Unsupported post request. Object with ID '1040035579202652' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api",
+    "type": "GraphMethodException",
+    "code": 100,
+    "error_subcode": 33,
+    "fbtrace_id": "Aegr8MoZewFPF2xWBe0fosZ"
+  }
+}
+================================================================================
+[2026-05-19T10:19:09.833Z] 🚀 CREATE TEMPLATE
+================================================================================
+[2026-05-19T10:19:09.834Z] 📋 REQUEST BODY:
+{
+  "name": "new_test",
+  "category": "MARKETING",
+  "language": "en",
+  "bodyText": "HEY BOT",
+  "footerText": null,
+  "headerType": "TEXT",
+  "headerText": "AAA",
+  "headerMediaHandle": null
+}
+================================================================================
+[2026-05-19T10:19:09.835Z] 📤 SENDING TO META:
+{
+  "name": "new_test",
+  "category": "MARKETING",
+  "language": "en",
+  "components": [
+    {
+      "type": "HEADER",
+      "format": "TEXT",
+      "text": "AAA"
+    },
+    {
+      "type": "BODY",
+      "text": "HEY BOT"
+    }
+  ]
+}
+================================================================================
+[2026-05-19T10:19:09.836Z] 📡 META API CALL: POST https://graph.facebook.com/v23.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T10:19:12.460Z] ✅ META API SUCCESS: POST https://graph.facebook.com/v23.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T10:19:12.461Z] ✅ TEMPLATE CREATED: new_test
+================================================================================
+[2026-05-19T10:19:12.467Z] 📡 META API CALL: GET https://graph.facebook.com/v23.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T10:19:12.857Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v23.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T10:50:29.262Z] 📡 META API CALL: GET https://graph.facebook.com/v23.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T10:50:29.859Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v23.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T10:53:10.381Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-19T10:53:10.383Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T10:53:11.130Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T10:53:30.743Z] 🚀 UPLOAD MEDIA (RESUMABLE)
+================================================================================
+[2026-05-19T10:53:30.744Z] 📁 File: Ð¤Ð¾Ð½.jpg, Size: 50317, Type: image/jpeg
+================================================================================
+[2026-05-19T10:53:30.745Z] 📡 Creating upload session with App ID: 1351699463683696
+================================================================================
+[2026-05-19T10:53:31.256Z] 📡 Upload session created: upload:MTphdHRhY2htZW50OmMwZTBkMGZmLTAxZWUtNDNmOS1hYWUxLTBkOWQ2N2VmZTJlOD9maWxlX25hbWU9JUMzJTkwJUMyJUE0JUMzJTkwJUMyJUJFJUMzJTkwJUMyJUJELmpwZyZmaWxlX2xlbmd0aD01MDMxNyZmaWxlX3R5cGU9aW1hZ2UlMkZqcGVn?sig=ARbbwkEhXLEp53NAPWo
+================================================================================
+[2026-05-19T10:53:32.176Z] ✅ Media handle obtained: 4:w5DCpMOQwr7DkMK9LmpwZw==:aW1hZ2UvanBlZw==:ARbxdAjGOVAxF3MG5AdJ0ARnrnRp-RluR2xG4QkD8XSXA9T2w9Bigvs6bP0f5aNkghfTtxpDw4d4Lyuv5mqZ3Rpawg_liaLbijYXvIYlUQ8o6Q:e:1779533612:1351699463683696:61589707094577:ARaaNXYMCVARlx199VA
+================================================================================
+[2026-05-19T10:54:07.182Z] 🚀 CREATE TEMPLATE
+================================================================================
+[2026-05-19T10:54:07.183Z] 📋 REQUEST BODY:
+{
+  "name": "new_testing",
+  "category": "MARKETING",
+  "language": "en",
+  "bodyText": "HEY MEET NOOB ",
+  "footerText": "Jass Perfumes",
+  "headerType": "IMAGE",
+  "headerText": null,
+  "headerMediaHandle": "4:w5DCpMOQwr7DkMK9LmpwZw==:aW1hZ2UvanBlZw==:ARbxdAjGOVAxF3MG5AdJ0ARnrnRp-RluR2xG4QkD8XSXA9T2w9Bigvs6bP0f5aNkghfTtxpDw4d4Lyuv5mqZ3Rpawg_liaLbijYXvIYlUQ8o6Q:e:1779533612:1351699463683696:61589707094577:ARaaNXYMCVARlx199VA"
+}
+================================================================================
+[2026-05-19T10:54:07.184Z] 📤 SENDING TO META:
+{
+  "name": "new_testing",
+  "category": "MARKETING",
+  "language": "en",
+  "components": [
+    {
+      "type": "HEADER",
+      "format": "IMAGE",
+      "example": {
+        "header_handle": [
+          "4:w5DCpMOQwr7DkMK9LmpwZw==:aW1hZ2UvanBlZw==:ARbxdAjGOVAxF3MG5AdJ0ARnrnRp-RluR2xG4QkD8XSXA9T2w9Bigvs6bP0f5aNkghfTtxpDw4d4Lyuv5mqZ3Rpawg_liaLbijYXvIYlUQ8o6Q:e:1779533612:1351699463683696:61589707094577:ARaaNXYMCVARlx199VA"
+        ]
+      }
+    },
+    {
+      "type": "BODY",
+      "text": "HEY MEET NOOB "
+    },
+    {
+      "type": "FOOTER",
+      "text": "Jass Perfumes"
+    }
+  ]
+}
+================================================================================
+[2026-05-19T10:54:07.185Z] 📡 META API CALL: POST https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T10:54:10.393Z] ✅ META API SUCCESS: POST https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T10:54:10.394Z] ✅ TEMPLATE CREATED SUCCESSFULLY: new_testing
+================================================================================
+[2026-05-19T10:54:10.402Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-19T10:54:10.403Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T10:54:10.871Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T10:55:58.531Z] 🚀 CREATE TEMPLATE
+================================================================================
+[2026-05-19T10:55:58.533Z] 📋 REQUEST BODY:
+{
+  "name": "order_test",
+  "category": "UTILITY",
+  "language": "en",
+  "bodyText": "Hii , Thank you for the order {{1}}",
+  "footerText": "Jass Perfumes",
+  "headerType": "TEXT",
+  "headerText": "Order",
+  "headerMediaHandle": null
+}
+================================================================================
+[2026-05-19T10:55:58.536Z] 📤 SENDING TO META:
+{
+  "name": "order_test",
+  "category": "UTILITY",
+  "language": "en",
+  "components": [
+    {
+      "type": "HEADER",
+      "format": "TEXT",
+      "text": "Order"
+    },
+    {
+      "type": "BODY",
+      "text": "Hii , Thank you for the order {{1}}",
+      "example": {
+        "body_text": [
+          [
+            "example"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "FOOTER",
+      "text": "Jass Perfumes"
+    }
+  ]
+}
+================================================================================
+[2026-05-19T10:55:58.537Z] 📡 META API CALL: POST https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T10:56:02.564Z] ❌ META API ERROR: POST https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T10:56:02.565Z] 🚨 DETAILS:
+{
+  "error": {
+    "message": "Invalid parameter",
+    "type": "OAuthException",
+    "code": 100,
+    "error_subcode": 2388299,
+    "is_transient": false,
+    "error_user_title": "Leading or trailing params not allowed",
+    "error_user_msg": "Variables can't be at the start or end of the template.",
+    "fbtrace_id": "AleO-fS0Vp085_idMBN6UAI"
+  }
+}
+================================================================================
+[2026-05-19T10:56:02.566Z] ❌ TEMPLATE CREATION FAILED: order_test
+================================================================================
+[2026-05-19T10:56:19.429Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-19T10:56:19.430Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T10:56:20.283Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T11:21:34.651Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-19T11:21:34.653Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T11:21:35.438Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T11:21:40.940Z] 🚀 DELETE TEMPLATE: new_order_confirmation
+================================================================================
+[2026-05-19T11:21:40.942Z] 📡 META API CALL: DELETE https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T11:21:43.744Z] ✅ META API SUCCESS: DELETE https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T11:21:43.782Z] ✅ Template deleted from database: new_order_confirmation
+================================================================================
+[2026-05-19T11:21:43.788Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-19T11:21:43.789Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T11:21:44.289Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T11:21:51.100Z] 🚀 DELETE TEMPLATE: new_test
+================================================================================
+[2026-05-19T11:21:51.101Z] 📡 META API CALL: DELETE https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T11:21:52.261Z] ✅ META API SUCCESS: DELETE https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T11:21:52.282Z] ✅ Template deleted from database: new_test
+================================================================================
+[2026-05-19T11:21:52.290Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-19T11:21:52.290Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T11:21:52.656Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T11:21:56.921Z] 🚀 GET TEMPLATE: thank_you
+================================================================================
+[2026-05-19T11:21:56.922Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?name=thank_you
+================================================================================
+[2026-05-19T11:21:57.301Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?name=thank_you
+================================================================================
+[2026-05-19T11:22:08.679Z] 🚀 GET TEMPLATE: jass
+================================================================================
+[2026-05-19T11:22:08.679Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?name=jass
+================================================================================
+[2026-05-19T11:22:09.056Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?name=jass
+================================================================================
+[2026-05-19T11:22:16.859Z] 🚀 DELETE TEMPLATE: order
+================================================================================
+[2026-05-19T11:22:16.860Z] 📡 META API CALL: DELETE https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T11:22:18.754Z] ✅ META API SUCCESS: DELETE https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T11:22:18.776Z] ✅ Template deleted from database: order
+================================================================================
+[2026-05-19T11:22:18.781Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-19T11:22:18.782Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T11:22:19.244Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T11:22:52.356Z] 🚀 UPLOAD MEDIA
+================================================================================
+[2026-05-19T11:22:52.702Z] 📡 Upload session created: upload:MTphdHRhY2htZW50OjFkNTQwNjdiLTE5NDQtNDBiMy1hNjJiLTRkNGFiNjE2YjkzMD9maWxlX25hbWU9JUMzJTkwJUMyJUE0JUMzJTkwJUMyJUJFJUMzJTkwJUMyJUJELmpwZyZmaWxlX2xlbmd0aD01MDMxNyZmaWxlX3R5cGU9aW1hZ2UlMkZqcGVn?sig=ARacq2QgtxeIp00nd6s
+================================================================================
+[2026-05-19T11:22:53.109Z] ✅ Media handle obtained: 4:w5DCpMOQwr7DkMK9LmpwZw==:aW1hZ2UvanBlZw==:ARb89Rsj27y-5V1sO2I9LEwDRpCrG9yez4QbdRL4EpOWf-20zU_F4p5GeWAktZNFJJRCP9TyiqAuOOlcGNmuyKNE4KSEV48_JY7mgU2t2BzsAQ:e:1779535373:1351699463683696:61589707094577:ARbNDkWxc-0Ce2LW-AI
+================================================================================
+[2026-05-19T11:23:08.462Z] 🚀 CREATE TEMPLATE
+================================================================================
+[2026-05-19T11:23:08.463Z] 📋 REQUEST BODY:
+{
+  "name": "th_test",
+  "category": "MARKETING",
+  "language": "en",
+  "bodyText": "Hey noob meet",
+  "footerText": "Jass Perfumes",
+  "headerType": "IMAGE",
+  "headerText": null,
+  "headerMediaHandle": "4:w5DCpMOQwr7DkMK9LmpwZw==:aW1hZ2UvanBlZw==:ARb89Rsj27y-5V1sO2I9LEwDRpCrG9yez4QbdRL4EpOWf-20zU_F4p5GeWAktZNFJJRCP9TyiqAuOOlcGNmuyKNE4KSEV48_JY7mgU2t2BzsAQ:e:1779535373:1351699463683696:61589707094577:ARbNDkWxc-0Ce2LW-AI"
+}
+================================================================================
+[2026-05-19T11:23:08.464Z] 📤 SENDING TO META:
+{
+  "name": "th_test",
+  "category": "MARKETING",
+  "language": "en",
+  "components": [
+    {
+      "type": "HEADER",
+      "format": "IMAGE",
+      "example": {
+        "header_handle": [
+          "4:w5DCpMOQwr7DkMK9LmpwZw==:aW1hZ2UvanBlZw==:ARb89Rsj27y-5V1sO2I9LEwDRpCrG9yez4QbdRL4EpOWf-20zU_F4p5GeWAktZNFJJRCP9TyiqAuOOlcGNmuyKNE4KSEV48_JY7mgU2t2BzsAQ:e:1779535373:1351699463683696:61589707094577:ARbNDkWxc-0Ce2LW-AI"
+        ]
+      }
+    },
+    {
+      "type": "BODY",
+      "text": "Hey noob meet"
+    },
+    {
+      "type": "FOOTER",
+      "text": "Jass Perfumes"
+    }
+  ]
+}
+================================================================================
+[2026-05-19T11:23:08.464Z] 📡 META API CALL: POST https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T11:23:13.114Z] ✅ META API SUCCESS: POST https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T11:23:13.114Z] ✅ TEMPLATE CREATED: th_test
+================================================================================
+[2026-05-19T11:23:13.157Z] ✅ Template saved to database. Media handle: 4:w5DCpMOQwr7DkMK9LmpwZw==:aW1hZ2UvanBlZw==:ARb89Rsj27y-5V1sO2I9LEwDRpCrG9yez4QbdRL4EpOWf-20zU_F4p5GeWAktZNFJJRCP9TyiqAuOOlcGNmuyKNE4KSEV48_JY7mgU2t2BzsAQ:e:1779535373:1351699463683696:61589707094577:ARbNDkWxc-0Ce2LW-AI
+================================================================================
+[2026-05-19T11:23:13.162Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-19T11:23:13.163Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T11:23:13.564Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T11:24:14.850Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-19T11:24:14.851Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T11:24:15.324Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T11:24:32.041Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-19T11:24:32.042Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T11:24:32.445Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T11:24:45.847Z] 🚀 GET TEMPLATE: th_test
+================================================================================
+[2026-05-19T11:24:45.848Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?name=th_test
+================================================================================
+[2026-05-19T11:24:46.245Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?name=th_test
+================================================================================
+[2026-05-19T11:24:50.214Z] 🚀 GET TEMPLATE: new_testing
+================================================================================
+[2026-05-19T11:24:50.215Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?name=new_testing
+================================================================================
+[2026-05-19T11:24:50.571Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?name=new_testing
+================================================================================
+[2026-05-19T11:25:12.860Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-19T11:25:12.861Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T11:25:13.312Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T11:53:54.783Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-19T11:53:54.785Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T11:53:55.252Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T11:53:57.314Z] 🚀 DELETE TEMPLATE: th_test
+================================================================================
+[2026-05-19T11:53:57.315Z] 📡 META API CALL: DELETE https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T11:53:58.902Z] ✅ META API SUCCESS: DELETE https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T11:53:58.927Z] ✅ Template deleted from database: th_test
+================================================================================
+[2026-05-19T11:53:58.931Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-19T11:53:58.932Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T11:53:59.330Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T11:54:02.439Z] 🚀 DELETE TEMPLATE: new_testing
+================================================================================
+[2026-05-19T11:54:02.440Z] 📡 META API CALL: DELETE https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T11:54:04.793Z] ✅ META API SUCCESS: DELETE https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T11:54:04.816Z] ✅ Template deleted from database: new_testing
+================================================================================
+[2026-05-19T11:54:04.823Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-19T11:54:04.823Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T11:54:05.239Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T11:54:42.959Z] 🚀 UPLOAD MEDIA
+================================================================================
+[2026-05-19T11:54:43.269Z] 📡 Upload session created: upload:MTphdHRhY2htZW50OjI1ZDhkZWQ1LWI4ZTItNGZlOS1hNzEyLTI1ZGM1NTViZjNhMD9maWxlX25hbWU9bmV3KzMrc3RlcHMucG5nJmZpbGVfbGVuZ3RoPTk5NjA0NSZmaWxlX3R5cGU9aW1hZ2UlMkZwbmc=?sig=ARamv4WkPbCQomUnIw0
+================================================================================
+[2026-05-19T11:54:43.958Z] ✅ Media handle obtained: 4:bmV3IDMgc3RlcHMucG5n:aW1hZ2UvcG5n:ARZzPUncy8UG0hZKaVn1iKztt9Q8K20GJplYmWcVe0367XqD1u_r1dWuvWGwVn2xf8KmMNyvt9GdV1pbzDKukFKxpami3FFcQwr7MxbQZPBIKQ:e:1779537284:1351699463683696:61589707094577:ARZXqxUGYcTFV9KxTP0
+================================================================================
+[2026-05-19T11:54:45.692Z] ✅ Numeric Media ID obtained: 1462527791766321
+================================================================================
+[2026-05-19T11:54:59.627Z] 🚀 CREATE TEMPLATE
+================================================================================
+[2026-05-19T11:54:59.627Z] 📋 REQUEST BODY:
+{
+  "name": "testing",
+  "category": "MARKETING",
+  "language": "en",
+  "bodyText": "Hey Bot noob ",
+  "footerText": null,
+  "headerType": "IMAGE",
+  "headerText": null,
+  "headerMediaHandle": "4:bmV3IDMgc3RlcHMucG5n:aW1hZ2UvcG5n:ARZzPUncy8UG0hZKaVn1iKztt9Q8K20GJplYmWcVe0367XqD1u_r1dWuvWGwVn2xf8KmMNyvt9GdV1pbzDKukFKxpami3FFcQwr7MxbQZPBIKQ:e:1779537284:1351699463683696:61589707094577:ARZXqxUGYcTFV9KxTP0"
+}
+================================================================================
+[2026-05-19T11:54:59.628Z] 📤 SENDING TO META:
+{
+  "name": "testing",
+  "category": "MARKETING",
+  "language": "en",
+  "components": [
+    {
+      "type": "HEADER",
+      "format": "IMAGE",
+      "example": {
+        "header_handle": [
+          "4:bmV3IDMgc3RlcHMucG5n:aW1hZ2UvcG5n:ARZzPUncy8UG0hZKaVn1iKztt9Q8K20GJplYmWcVe0367XqD1u_r1dWuvWGwVn2xf8KmMNyvt9GdV1pbzDKukFKxpami3FFcQwr7MxbQZPBIKQ:e:1779537284:1351699463683696:61589707094577:ARZXqxUGYcTFV9KxTP0"
+        ]
+      }
+    },
+    {
+      "type": "BODY",
+      "text": "Hey Bot noob "
+    }
+  ]
+}
+================================================================================
+[2026-05-19T11:54:59.629Z] 📡 META API CALL: POST https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T11:55:03.318Z] ✅ META API SUCCESS: POST https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T11:55:03.318Z] ✅ TEMPLATE CREATED: testing
+================================================================================
+[2026-05-19T11:55:03.364Z] ✅ Template saved to database. Media handle: 4:bmV3IDMgc3RlcHMucG5n:aW1hZ2UvcG5n:ARZzPUncy8UG0hZKaVn1iKztt9Q8K20GJplYmWcVe0367XqD1u_r1dWuvWGwVn2xf8KmMNyvt9GdV1pbzDKukFKxpami3FFcQwr7MxbQZPBIKQ:e:1779537284:1351699463683696:61589707094577:ARZXqxUGYcTFV9KxTP0, Media ID: none
+================================================================================
+[2026-05-19T11:55:03.369Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-19T11:55:03.369Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T11:55:03.771Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T11:56:57.779Z] 🚀 UPLOAD MEDIA
+================================================================================
+[2026-05-19T11:56:58.282Z] 📡 Upload session created: upload:MTphdHRhY2htZW50OmQ5Y2Y4ZGJhLTE5M2QtNDc2MS1hMjlhLWQ1ZGE1MGM5Zjc5Mj9maWxlX25hbWU9V2hhdHNBcHArSW1hZ2UrMjAyNi0wNS0xOSthdCsxNy4yNi4xNS5qcGVnJmZpbGVfbGVuZ3RoPTE2NDUzMiZmaWxlX3R5cGU9aW1hZ2UlMkZqcGVn?sig=ARbtYG_9GcNDHk5rwTA
+================================================================================
+[2026-05-19T11:56:58.901Z] ✅ Media handle obtained: 4:V2hhdHNBcHAgSW1hZ2UgMjAyNi0wNS0xOSBhdCAxNy4yNi4xNS5qcGVn:aW1hZ2UvanBlZw==:ARazjkpf0OV4e_ztv-7b_D8FlcavYfPFe572CFqbCsT1p9rQscZmvaobRxelUIKgRVc1sAvVLtSWvLZuzQ4y1jG2jKrTpj7EliDsX_hXEVQbuw:e:1779537419:1351699463683696:61589707094577:ARb-x3pjbTE-M-pSdBA
+================================================================================
+[2026-05-19T11:57:00.713Z] ✅ Numeric Media ID obtained: 1707651860407008
+================================================================================
+[2026-05-19T11:57:11.306Z] 🚀 CREATE TEMPLATE
+================================================================================
+[2026-05-19T11:57:11.307Z] 📋 REQUEST BODY:
+{
+  "name": "techorses",
+  "category": "MARKETING",
+  "language": "en",
+  "bodyText": "Hii Meet",
+  "footerText": "Techorses",
+  "headerType": "IMAGE",
+  "headerText": null,
+  "headerMediaHandle": "4:V2hhdHNBcHAgSW1hZ2UgMjAyNi0wNS0xOSBhdCAxNy4yNi4xNS5qcGVn:aW1hZ2UvanBlZw==:ARazjkpf0OV4e_ztv-7b_D8FlcavYfPFe572CFqbCsT1p9rQscZmvaobRxelUIKgRVc1sAvVLtSWvLZuzQ4y1jG2jKrTpj7EliDsX_hXEVQbuw:e:1779537419:1351699463683696:61589707094577:ARb-x3pjbTE-M-pSdBA"
+}
+================================================================================
+[2026-05-19T11:57:11.308Z] 📤 SENDING TO META:
+{
+  "name": "techorses",
+  "category": "MARKETING",
+  "language": "en",
+  "components": [
+    {
+      "type": "HEADER",
+      "format": "IMAGE",
+      "example": {
+        "header_handle": [
+          "4:V2hhdHNBcHAgSW1hZ2UgMjAyNi0wNS0xOSBhdCAxNy4yNi4xNS5qcGVn:aW1hZ2UvanBlZw==:ARazjkpf0OV4e_ztv-7b_D8FlcavYfPFe572CFqbCsT1p9rQscZmvaobRxelUIKgRVc1sAvVLtSWvLZuzQ4y1jG2jKrTpj7EliDsX_hXEVQbuw:e:1779537419:1351699463683696:61589707094577:ARb-x3pjbTE-M-pSdBA"
+        ]
+      }
+    },
+    {
+      "type": "BODY",
+      "text": "Hii Meet"
+    },
+    {
+      "type": "FOOTER",
+      "text": "Techorses"
+    }
+  ]
+}
+================================================================================
+[2026-05-19T11:57:11.309Z] 📡 META API CALL: POST https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T11:57:16.711Z] ✅ META API SUCCESS: POST https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T11:57:16.711Z] ✅ TEMPLATE CREATED: techorses
+================================================================================
+[2026-05-19T11:57:16.737Z] ✅ Template saved to database. Media handle: 4:V2hhdHNBcHAgSW1hZ2UgMjAyNi0wNS0xOSBhdCAxNy4yNi4xNS5qcGVn:aW1hZ2UvanBlZw==:ARazjkpf0OV4e_ztv-7b_D8FlcavYfPFe572CFqbCsT1p9rQscZmvaobRxelUIKgRVc1sAvVLtSWvLZuzQ4y1jG2jKrTpj7EliDsX_hXEVQbuw:e:1779537419:1351699463683696:61589707094577:ARb-x3pjbTE-M-pSdBA, Media ID: none
+================================================================================
+[2026-05-19T11:57:16.741Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-19T11:57:16.742Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T11:57:17.263Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T11:57:19.480Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-19T11:57:19.484Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T11:57:19.968Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T11:57:41.108Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-19T11:57:41.108Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T11:57:41.653Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T11:57:44.835Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-19T11:57:44.836Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T11:57:45.375Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T11:58:19.299Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-19T11:58:19.301Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T11:58:19.849Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T11:59:31.019Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-19T11:59:31.020Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T11:59:31.589Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T12:09:19.782Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-19T12:09:19.783Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T12:09:20.348Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T12:09:24.839Z] 🚀 DELETE TEMPLATE: techorses
+================================================================================
+[2026-05-19T12:09:24.843Z] 📡 META API CALL: DELETE https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T12:09:26.839Z] ✅ META API SUCCESS: DELETE https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T12:09:26.866Z] ✅ Template deleted from database: techorses
+================================================================================
+[2026-05-19T12:09:26.873Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-19T12:09:26.874Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T12:09:27.276Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T12:09:51.452Z] 🚀 UPLOAD MEDIA
+================================================================================
+[2026-05-19T12:09:51.455Z] ✅ Image saved publicly: http://localhost:3037/uploads/wa_1779192591453.jpeg
+================================================================================
+[2026-05-19T12:09:51.792Z] 📡 Upload session created: upload:MTphdHRhY2htZW50OmU3MzkyYzU4LTNjOGMtNDU2MS04ZGE2LTcwMjMwOTdhZDQwMj9maWxlX25hbWU9V2hhdHNBcHArSW1hZ2UrMjAyNi0wNS0xOSthdCsxNy4yNi4xNS5qcGVnJmZpbGVfbGVuZ3RoPTE2NDUzMiZmaWxlX3R5cGU9aW1hZ2UlMkZqcGVn?sig=ARayp4C55NwbO4OEtSw
+================================================================================
+[2026-05-19T12:09:52.325Z] ✅ Media handle obtained: 4:V2hhdHNBcHAgSW1hZ2UgMjAyNi0wNS0xOSBhdCAxNy4yNi4xNS5qcGVn:aW1hZ2UvanBlZw==:ARbDxBHAQYs8t0TfVVQeU-jbb_xwaULgbsnJ2stxdtEchBOjQl0EK4g9Vn3Mxot2m-Ijd-sRWudxTgrG-wtcudkyKR3Mjj7bq7IpFAolA-XduQ:e:1779538192:1351699463683696:61589707094577:ARZyEY3euXdxbPvI5is
+================================================================================
+[2026-05-19T12:09:53.554Z] ✅ Numeric Media ID obtained: 4051437531821540
+================================================================================
+[2026-05-19T12:10:11.423Z] 🚀 CREATE TEMPLATE
+================================================================================
+[2026-05-19T12:10:11.424Z] 📋 REQUEST BODY:
+{
+  "name": "techorses",
+  "category": "MARKETING",
+  "language": "en",
+  "bodyText": "Hey Meet Noob",
+  "footerText": "Techorses",
+  "headerType": "IMAGE",
+  "headerText": null,
+  "headerMediaHandle": "4:V2hhdHNBcHAgSW1hZ2UgMjAyNi0wNS0xOSBhdCAxNy4yNi4xNS5qcGVn:aW1hZ2UvanBlZw==:ARbDxBHAQYs8t0TfVVQeU-jbb_xwaULgbsnJ2stxdtEchBOjQl0EK4g9Vn3Mxot2m-Ijd-sRWudxTgrG-wtcudkyKR3Mjj7bq7IpFAolA-XduQ:e:1779538192:1351699463683696:61589707094577:ARZyEY3euXdxbPvI5is"
+}
+================================================================================
+[2026-05-19T12:10:11.424Z] 📤 SENDING TO META:
+{
+  "name": "techorses",
+  "category": "MARKETING",
+  "language": "en",
+  "components": [
+    {
+      "type": "HEADER",
+      "format": "IMAGE",
+      "example": {
+        "header_handle": [
+          "4:V2hhdHNBcHAgSW1hZ2UgMjAyNi0wNS0xOSBhdCAxNy4yNi4xNS5qcGVn:aW1hZ2UvanBlZw==:ARbDxBHAQYs8t0TfVVQeU-jbb_xwaULgbsnJ2stxdtEchBOjQl0EK4g9Vn3Mxot2m-Ijd-sRWudxTgrG-wtcudkyKR3Mjj7bq7IpFAolA-XduQ:e:1779538192:1351699463683696:61589707094577:ARZyEY3euXdxbPvI5is"
+        ]
+      }
+    },
+    {
+      "type": "BODY",
+      "text": "Hey Meet Noob"
+    },
+    {
+      "type": "FOOTER",
+      "text": "Techorses"
+    }
+  ]
+}
+================================================================================
+[2026-05-19T12:10:11.425Z] 📡 META API CALL: POST https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T12:10:13.281Z] ❌ META API ERROR: POST https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T12:10:13.282Z] 🚨 DETAILS:
+{
+  "error": {
+    "message": "Invalid parameter",
+    "type": "OAuthException",
+    "code": 100,
+    "error_subcode": 2388023,
+    "is_transient": false,
+    "error_user_title": "Message template language is being deleted",
+    "error_user_msg": "New English content can't be added while the existing English content is being deleted. Try again in 4 weeks or consider creating a new message template.",
+    "fbtrace_id": "AM5sIoW1sRwh0aub7ZZcRSK"
+  }
+}
+================================================================================
+[2026-05-19T12:10:13.282Z] ❌ TEMPLATE CREATION FAILED: techorses
+================================================================================
+[2026-05-19T12:10:50.921Z] 🚀 CREATE TEMPLATE
+================================================================================
+[2026-05-19T12:10:50.922Z] 📋 REQUEST BODY:
+{
+  "name": "techorses_new",
+  "category": "MARKETING",
+  "language": "en",
+  "bodyText": "Hey Meet Noob",
+  "footerText": "Techorses",
+  "headerType": "IMAGE",
+  "headerText": null,
+  "headerMediaHandle": "4:V2hhdHNBcHAgSW1hZ2UgMjAyNi0wNS0xOSBhdCAxNy4yNi4xNS5qcGVn:aW1hZ2UvanBlZw==:ARbDxBHAQYs8t0TfVVQeU-jbb_xwaULgbsnJ2stxdtEchBOjQl0EK4g9Vn3Mxot2m-Ijd-sRWudxTgrG-wtcudkyKR3Mjj7bq7IpFAolA-XduQ:e:1779538192:1351699463683696:61589707094577:ARZyEY3euXdxbPvI5is"
+}
+================================================================================
+[2026-05-19T12:10:50.923Z] 📤 SENDING TO META:
+{
+  "name": "techorses_new",
+  "category": "MARKETING",
+  "language": "en",
+  "components": [
+    {
+      "type": "HEADER",
+      "format": "IMAGE",
+      "example": {
+        "header_handle": [
+          "4:V2hhdHNBcHAgSW1hZ2UgMjAyNi0wNS0xOSBhdCAxNy4yNi4xNS5qcGVn:aW1hZ2UvanBlZw==:ARbDxBHAQYs8t0TfVVQeU-jbb_xwaULgbsnJ2stxdtEchBOjQl0EK4g9Vn3Mxot2m-Ijd-sRWudxTgrG-wtcudkyKR3Mjj7bq7IpFAolA-XduQ:e:1779538192:1351699463683696:61589707094577:ARZyEY3euXdxbPvI5is"
+        ]
+      }
+    },
+    {
+      "type": "BODY",
+      "text": "Hey Meet Noob"
+    },
+    {
+      "type": "FOOTER",
+      "text": "Techorses"
+    }
+  ]
+}
+================================================================================
+[2026-05-19T12:10:50.923Z] 📡 META API CALL: POST https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T12:10:55.672Z] ✅ META API SUCCESS: POST https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T12:10:55.673Z] ✅ TEMPLATE CREATED: techorses_new
+================================================================================
+[2026-05-19T12:10:55.704Z] ✅ Template saved to DB. Media handle: 4:V2hhdHNBcHAgSW1hZ2UgMjAyNi0wNS0xOSBhdCAxNy4yNi4xNS5qcGVn:aW1hZ2UvanBlZw==:ARbDxBHAQYs8t0TfVVQeU-jbb_xwaULgbsnJ2stxdtEchBOjQl0EK4g9Vn3Mxot2m-Ijd-sRWudxTgrG-wtcudkyKR3Mjj7bq7IpFAolA-XduQ:e:1779538192:1351699463683696:61589707094577:ARZyEY3euXdxbPvI5is, Media ID: none, Image URL: none
+================================================================================
+[2026-05-19T12:10:55.711Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-19T12:10:55.712Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T12:10:56.258Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T12:12:46.473Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-19T12:12:46.475Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T12:12:46.942Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T12:13:56.693Z] 🚀 UPLOAD MEDIA
+================================================================================
+[2026-05-19T12:13:56.696Z] ✅ Image saved publicly: http://localhost:3037/uploads/wa_1779192836694.jpeg
+================================================================================
+[2026-05-19T12:13:57.104Z] 📡 Upload session created: upload:MTphdHRhY2htZW50OjUxOGNlMDYwLTg2MjEtNGQ2ZS1hZTA3LWYxMjI2YTFjNzY5MD9maWxlX25hbWU9V2hhdHNBcHArSW1hZ2UrMjAyNi0wNS0xOSthdCsxNy4yNi4xNS5qcGVnJmZpbGVfbGVuZ3RoPTE2NDUzMiZmaWxlX3R5cGU9aW1hZ2UlMkZqcGVn?sig=ARZAeERuAByecuzLjyU
+================================================================================
+[2026-05-19T12:13:57.749Z] ✅ Media handle obtained: 4:V2hhdHNBcHAgSW1hZ2UgMjAyNi0wNS0xOSBhdCAxNy4yNi4xNS5qcGVn:aW1hZ2UvanBlZw==:ARYCySek5r9o_7z8SLhsw_qi-oETRalZOSWNV1UXtFzQ3HOl4apY7VlschVuxs7f3CRZwFbwJu7OsbaIK11A_H36w1vzpOumx40AOlGxKR5lKA:e:1779538437:1351699463683696:61589707094577:ARaNVTpCKph69nUyDaQ
+================================================================================
+[2026-05-19T12:13:58.874Z] ✅ Numeric Media ID obtained: 35630759436570366
+================================================================================
+[2026-05-19T12:14:11.741Z] 🚀 CREATE TEMPLATE
+================================================================================
+[2026-05-19T12:14:11.741Z] 📋 REQUEST BODY:
+{
+  "name": "new_testing1",
+  "category": "MARKETING",
+  "language": "en",
+  "bodyText": "Hey Meet",
+  "footerText": "Jass Perfumes",
+  "headerType": "IMAGE",
+  "headerText": null,
+  "headerMediaHandle": "4:V2hhdHNBcHAgSW1hZ2UgMjAyNi0wNS0xOSBhdCAxNy4yNi4xNS5qcGVn:aW1hZ2UvanBlZw==:ARYCySek5r9o_7z8SLhsw_qi-oETRalZOSWNV1UXtFzQ3HOl4apY7VlschVuxs7f3CRZwFbwJu7OsbaIK11A_H36w1vzpOumx40AOlGxKR5lKA:e:1779538437:1351699463683696:61589707094577:ARaNVTpCKph69nUyDaQ"
+}
+================================================================================
+[2026-05-19T12:14:11.742Z] 📤 SENDING TO META:
+{
+  "name": "new_testing1",
+  "category": "MARKETING",
+  "language": "en",
+  "components": [
+    {
+      "type": "HEADER",
+      "format": "IMAGE",
+      "example": {
+        "header_handle": [
+          "4:V2hhdHNBcHAgSW1hZ2UgMjAyNi0wNS0xOSBhdCAxNy4yNi4xNS5qcGVn:aW1hZ2UvanBlZw==:ARYCySek5r9o_7z8SLhsw_qi-oETRalZOSWNV1UXtFzQ3HOl4apY7VlschVuxs7f3CRZwFbwJu7OsbaIK11A_H36w1vzpOumx40AOlGxKR5lKA:e:1779538437:1351699463683696:61589707094577:ARaNVTpCKph69nUyDaQ"
+        ]
+      }
+    },
+    {
+      "type": "BODY",
+      "text": "Hey Meet"
+    },
+    {
+      "type": "FOOTER",
+      "text": "Jass Perfumes"
+    }
+  ]
+}
+================================================================================
+[2026-05-19T12:14:11.742Z] 📡 META API CALL: POST https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T12:14:15.267Z] ✅ META API SUCCESS: POST https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T12:14:15.268Z] ✅ TEMPLATE CREATED: new_testing1
+================================================================================
+[2026-05-19T12:14:15.317Z] ✅ Template saved to DB. Media handle: 4:V2hhdHNBcHAgSW1hZ2UgMjAyNi0wNS0xOSBhdCAxNy4yNi4xNS5qcGVn:aW1hZ2UvanBlZw==:ARYCySek5r9o_7z8SLhsw_qi-oETRalZOSWNV1UXtFzQ3HOl4apY7VlschVuxs7f3CRZwFbwJu7OsbaIK11A_H36w1vzpOumx40AOlGxKR5lKA:e:1779538437:1351699463683696:61589707094577:ARaNVTpCKph69nUyDaQ, Media ID: none, Image URL: none
+================================================================================
+[2026-05-19T12:14:15.322Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-19T12:14:15.323Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T12:14:15.712Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T12:15:41.543Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-19T12:15:41.544Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T12:15:41.973Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T12:23:55.802Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-19T12:23:55.803Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T12:23:56.510Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T12:24:27.421Z] 🚀 DELETE TEMPLATE: new_testing1
+================================================================================
+[2026-05-19T12:24:27.423Z] 📡 META API CALL: DELETE https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T12:24:28.922Z] ✅ META API SUCCESS: DELETE https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T12:24:28.996Z] ✅ Template deleted from database: new_testing1
+================================================================================
+[2026-05-19T12:24:29.009Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-19T12:24:29.012Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T12:24:29.462Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T12:24:32.262Z] 🚀 DELETE TEMPLATE: techorses_new
+================================================================================
+[2026-05-19T12:24:32.263Z] 📡 META API CALL: DELETE https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T12:24:34.045Z] ✅ META API SUCCESS: DELETE https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T12:24:34.122Z] ✅ Template deleted from database: techorses_new
+================================================================================
+[2026-05-19T12:24:34.129Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-19T12:24:34.131Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T12:24:34.547Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T12:24:36.198Z] 🚀 DELETE TEMPLATE: testing
+================================================================================
+[2026-05-19T12:24:36.199Z] 📡 META API CALL: DELETE https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T12:24:38.157Z] ✅ META API SUCCESS: DELETE https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T12:24:38.233Z] ✅ Template deleted from database: testing
+================================================================================
+[2026-05-19T12:24:38.243Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-19T12:24:38.244Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T12:24:38.633Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T12:24:58.153Z] 🚀 UPLOAD MEDIA
+================================================================================
+[2026-05-19T12:24:58.158Z] ✅ Image saved publicly: http://localhost:3037/uploads/wa_1779193498155.jpeg
+================================================================================
+[2026-05-19T12:24:58.626Z] 📡 Upload session created: upload:MTphdHRhY2htZW50OjU3YWQ0YTZiLTg2YjgtNDY3NC1iOTAzLTgwODQyNDMyYmE3Zj9maWxlX25hbWU9V2hhdHNBcHArSW1hZ2UrMjAyNi0wNS0xOSthdCsxNy4yNi4xNS5qcGVnJmZpbGVfbGVuZ3RoPTE2NDUzMiZmaWxlX3R5cGU9aW1hZ2UlMkZqcGVn?sig=ARZbhQ4hgmrMqRjFqHc
+================================================================================
+[2026-05-19T12:24:59.285Z] ✅ Media handle obtained: 4:V2hhdHNBcHAgSW1hZ2UgMjAyNi0wNS0xOSBhdCAxNy4yNi4xNS5qcGVn:aW1hZ2UvanBlZw==:ARaluTdJwD0qFwINPMHSMT9BtEQ8ku3WXnv56CVpjn_BOQJ8oE_jQXxW-l7AFilOrxM_6KAdQeDnaW1fvdn1NcUZAQ_pM8jr79kkwLWYfx02Ug:e:1779539099:1351699463683696:61589707094577:ARYbbKrYCE7z9QUzgkE
+================================================================================
+[2026-05-19T12:25:00.483Z] ✅ Numeric Media ID obtained: 2083050422626616
+================================================================================
+[2026-05-19T12:25:14.275Z] 🚀 CREATE TEMPLATE
+================================================================================
+[2026-05-19T12:25:14.276Z] 📋 REQUEST BODY:
+{
+  "name": "testing2",
+  "category": "MARKETING",
+  "language": "en",
+  "bodyText": "Hey Meet",
+  "footerText": "Techorses",
+  "headerType": "IMAGE",
+  "headerText": null,
+  "headerMediaHandle": "4:V2hhdHNBcHAgSW1hZ2UgMjAyNi0wNS0xOSBhdCAxNy4yNi4xNS5qcGVn:aW1hZ2UvanBlZw==:ARaluTdJwD0qFwINPMHSMT9BtEQ8ku3WXnv56CVpjn_BOQJ8oE_jQXxW-l7AFilOrxM_6KAdQeDnaW1fvdn1NcUZAQ_pM8jr79kkwLWYfx02Ug:e:1779539099:1351699463683696:61589707094577:ARYbbKrYCE7z9QUzgkE",
+  "headerMediaId": "2083050422626616",
+  "headerImageUrl": "http://localhost:3037/uploads/wa_1779193498155.jpeg"
+}
+================================================================================
+[2026-05-19T12:25:14.278Z] 📤 SENDING TO META:
+{
+  "name": "testing2",
+  "category": "MARKETING",
+  "language": "en",
+  "components": [
+    {
+      "type": "HEADER",
+      "format": "IMAGE",
+      "example": {
+        "header_handle": [
+          "4:V2hhdHNBcHAgSW1hZ2UgMjAyNi0wNS0xOSBhdCAxNy4yNi4xNS5qcGVn:aW1hZ2UvanBlZw==:ARaluTdJwD0qFwINPMHSMT9BtEQ8ku3WXnv56CVpjn_BOQJ8oE_jQXxW-l7AFilOrxM_6KAdQeDnaW1fvdn1NcUZAQ_pM8jr79kkwLWYfx02Ug:e:1779539099:1351699463683696:61589707094577:ARYbbKrYCE7z9QUzgkE"
+        ]
+      }
+    },
+    {
+      "type": "BODY",
+      "text": "Hey Meet"
+    },
+    {
+      "type": "FOOTER",
+      "text": "Techorses"
+    }
+  ]
+}
+================================================================================
+[2026-05-19T12:25:14.279Z] 📡 META API CALL: POST https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T12:25:18.144Z] ✅ META API SUCCESS: POST https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T12:25:18.145Z] ✅ TEMPLATE CREATED: testing2
+================================================================================
+[2026-05-19T12:25:18.245Z] ✅ Template saved to DB. Media handle: 4:V2hhdHNBcHAgSW1hZ2UgMjAyNi0wNS0xOSBhdCAxNy4yNi4xNS5qcGVn:aW1hZ2UvanBlZw==:ARaluTdJwD0qFwINPMHSMT9BtEQ8ku3WXnv56CVpjn_BOQJ8oE_jQXxW-l7AFilOrxM_6KAdQeDnaW1fvdn1NcUZAQ_pM8jr79kkwLWYfx02Ug:e:1779539099:1351699463683696:61589707094577:ARYbbKrYCE7z9QUzgkE, Media ID: 2083050422626616, Image URL: http://localhost:3037/uploads/wa_1779193498155.jpeg
+================================================================================
+[2026-05-19T12:25:18.254Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-19T12:25:18.255Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T12:25:18.679Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T12:35:58.762Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-19T12:35:58.763Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T12:35:59.524Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T12:36:16.821Z] 🚀 GET TEMPLATE: thank_you
+================================================================================
+[2026-05-19T12:36:16.822Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?name=thank_you
+================================================================================
+[2026-05-19T12:36:17.407Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?name=thank_you
+================================================================================
+[2026-05-19T12:36:25.141Z] 🚀 GET TEMPLATE: testing2
+================================================================================
+[2026-05-19T12:36:25.142Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?name=testing2
+================================================================================
+[2026-05-19T12:36:26.318Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?name=testing2
+================================================================================
+[2026-05-19T12:49:51.931Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-19T12:49:51.939Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T12:49:52.600Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T12:51:44.346Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-19T12:51:44.348Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T12:51:45.348Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T12:52:20.703Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-19T12:52:20.705Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T12:52:21.313Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T12:53:03.897Z] 🚀 UPLOAD MEDIA
+================================================================================
+[2026-05-19T12:53:03.905Z] ✅ Image saved publicly: http://localhost:3037/uploads/wa_1779195183899.jpeg
+================================================================================
+[2026-05-19T12:53:04.361Z] 📡 Upload session created: upload:MTphdHRhY2htZW50OjljMDg3M2M5LWZjYWItNGQ0ZS1iYzU2LWJhMTA2ZTdmNTgyMz9maWxlX25hbWU9V2hhdHNBcHArSW1hZ2UrMjAyNi0wNS0xOSthdCsxNy4yNi4xNS5qcGVnJmZpbGVfbGVuZ3RoPTE2NDUzMiZmaWxlX3R5cGU9aW1hZ2UlMkZqcGVn?sig=ARb9FLMyrvdC1FiSpMQ
+================================================================================
+[2026-05-19T12:53:05.040Z] ✅ Media handle obtained: 4:V2hhdHNBcHAgSW1hZ2UgMjAyNi0wNS0xOSBhdCAxNy4yNi4xNS5qcGVn:aW1hZ2UvanBlZw==:ARbtp_Iu6vNXMIv-TxGbPqjOxQQEIkbBWMp4ZGqEE3AWekUmtMEFyvjgtbcFTO-IUnV4QZlyRQjEjfwv9CGuwsZLB1Ahr3A80-7VJDmN1Tn0JQ:e:1779540785:1351699463683696:61589707094577:ARZj03KXSp-bu3l9NOo
+================================================================================
+[2026-05-19T12:53:06.329Z] ✅ Numeric Media ID obtained: 1791949775104776
+================================================================================
+[2026-05-19T12:53:21.502Z] 🚀 CREATE TEMPLATE
+================================================================================
+[2026-05-19T12:53:21.503Z] 📋 REQUEST BODY:
+{
+  "name": "testing3",
+  "category": "MARKETING",
+  "language": "en",
+  "bodyText": "Hey Man",
+  "footerText": "techorses",
+  "headerType": "IMAGE",
+  "headerText": null,
+  "headerMediaHandle": "4:V2hhdHNBcHAgSW1hZ2UgMjAyNi0wNS0xOSBhdCAxNy4yNi4xNS5qcGVn:aW1hZ2UvanBlZw==:ARbtp_Iu6vNXMIv-TxGbPqjOxQQEIkbBWMp4ZGqEE3AWekUmtMEFyvjgtbcFTO-IUnV4QZlyRQjEjfwv9CGuwsZLB1Ahr3A80-7VJDmN1Tn0JQ:e:1779540785:1351699463683696:61589707094577:ARZj03KXSp-bu3l9NOo",
+  "headerMediaId": "1791949775104776",
+  "headerImageUrl": "http://localhost:3037/uploads/wa_1779195183899.jpeg"
+}
+================================================================================
+[2026-05-19T12:53:21.504Z] 📤 SENDING TO META:
+{
+  "name": "testing3",
+  "category": "MARKETING",
+  "language": "en",
+  "components": [
+    {
+      "type": "HEADER",
+      "format": "IMAGE",
+      "example": {
+        "header_handle": [
+          "4:V2hhdHNBcHAgSW1hZ2UgMjAyNi0wNS0xOSBhdCAxNy4yNi4xNS5qcGVn:aW1hZ2UvanBlZw==:ARbtp_Iu6vNXMIv-TxGbPqjOxQQEIkbBWMp4ZGqEE3AWekUmtMEFyvjgtbcFTO-IUnV4QZlyRQjEjfwv9CGuwsZLB1Ahr3A80-7VJDmN1Tn0JQ:e:1779540785:1351699463683696:61589707094577:ARZj03KXSp-bu3l9NOo"
+        ]
+      }
+    },
+    {
+      "type": "BODY",
+      "text": "Hey Man"
+    },
+    {
+      "type": "FOOTER",
+      "text": "techorses"
+    }
+  ]
+}
+================================================================================
+[2026-05-19T12:53:21.506Z] 📡 META API CALL: POST https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T12:53:24.573Z] ✅ META API SUCCESS: POST https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-19T12:53:24.574Z] ✅ TEMPLATE CREATED: testing3
+================================================================================
+[2026-05-19T12:53:24.651Z] ✅ Template saved to DB. Media handle: 4:V2hhdHNBcHAgSW1hZ2UgMjAyNi0wNS0xOSBhdCAxNy4yNi4xNS5qcGVn:aW1hZ2UvanBlZw==:ARbtp_Iu6vNXMIv-TxGbPqjOxQQEIkbBWMp4ZGqEE3AWekUmtMEFyvjgtbcFTO-IUnV4QZlyRQjEjfwv9CGuwsZLB1Ahr3A80-7VJDmN1Tn0JQ:e:1779540785:1351699463683696:61589707094577:ARZj03KXSp-bu3l9NOo, Media ID: 1791949775104776, Image URL: http://localhost:3037/uploads/wa_1779195183899.jpeg
+================================================================================
+[2026-05-19T12:53:24.685Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-19T12:53:24.686Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T12:53:25.135Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T12:57:40.588Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-19T12:57:40.589Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-19T12:57:41.080Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-20T05:16:35.991Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-20T05:16:36.015Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-20T05:16:36.538Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-20T05:19:45.872Z] 🚀 UPLOAD MEDIA
+================================================================================
+[2026-05-20T05:19:45.932Z] ✅ Media saved publicly: http://localhost:3037/uploads/wa_1779254385873.mp4
+================================================================================
+[2026-05-20T05:19:46.465Z] 📡 Upload session created: upload:MTphdHRhY2htZW50OjNkOTg5MGU0LWRjZTEtNDJkZC05MjQxLWVhNWFkOTBiODA4Zj9maWxlX25hbWU9YmlnLm1wNCZmaWxlX2xlbmd0aD03ODQyNjYwJmZpbGVfdHlwZT12aWRlbyUyRm1wNA==?sig=ARYbjBUP4JOAsmBe8m4
+================================================================================
+[2026-05-20T05:19:48.624Z] ✅ Media handle obtained: 4:YmlnLm1wNA==:dmlkZW8vbXA0:ARazdAZ3307uopOjnUx68qj6-6hCBhwMxH7rODfipu5_F0f8wBIUfKaLd9tMQOhMJ7XaOg_EZFBJaPhPEytwuLVZuiXfBl_f-q2n8eQ0oqcKVg:e:1779599987:1351699463683696:61589707094577:ARbLwgXd8U_ISyu8Swg
+4:YmlnLm1wNA==:dmlkZW8vbXA0:ARZ3jk12-kSLhg4mPQ1oBJ8VfY_mYQrw9eSXxbSqctgmIuxJztk_KN2zs3jSdSj00k5_mNrY3nzysF7iSYIDM8KUIcYNk0QTH-_KJR_u8Ol7Vg:e:1779599988:1351699463683696:61589707094577:ARYy4cdBEPIqcVUKtAc
+4:YmlnLm1wNA==:dmlkZW8vbXA0:ARZcgthihX40i8UnGaT93gqWEuHBld32RUVf0etisk_hw6LjWHMMR_3EEYG_silaRurv_uXL87rMM18mh0mG3BI_qXiWJlXljXZpFoDepq2FcQ:e:1779599988:1351699463683696:61589707094577:ARaMjlRTclHHuSkGPT8
+4:YmlnLm1wNA==:dmlkZW8vbXA0:ARar0FVPIn_gk4F_YPL55ZQHm1q4FJE0uICw2pl2VyMEtUoIpIGgBGglHWEfoqjAHErFUaebKRKC2RopN60Wz06TEpwqmI42TxwgTG77uumorQ:e:1779599988:1351699463683696:61589707094577:ARYpnD59-4dkviKPTYU
+4:YmlnLm1wNA==:dmlkZW8vbXA0:ARZlqlVWgKmaw4LcJU24J5mCmo5bcjOOawSvQU1Ga1z-OYCnxYhf9g-Db2nynf9ZKJUqRDQPyND61akSUMJxbuMbcKgJ-r7sVu8lFy8ZB5gIzA:e:1779599988:1351699463683696:61589707094577:ARbm8ly8xB6XwV9iXz8
+4:YmlnLm1wNA==:dmlkZW8vbXA0:ARZppvTt_Io3gqm5iYnn9GF4yYnxv4ol8bsZ6QyGSvV6kGmOsydvVPbAiX5A0_M_unBxFmVpaJLiLRvQzRvsFVSN8V5I_hWI-z7EAmmjSH94Xg:e:1779599988:1351699463683696:61589707094577:ARYzt506P2lyXa75TkQ
+4:YmlnLm1wNA==:dmlkZW8vbXA0:ARY1EkEqUhJwGalrheR6zoEKfquCpLlHk09eC_KHrG7eozULwGgYgZatkIu10qiJGSoyKw8tECjyR3s3ZoR4wwhX8-YSJY-BO4iVLg22d3xsSQ:e:1779599988:1351699463683696:61589707094577:ARbVHdKu56t3-q--6h4
+4:YmlnLm1wNA==:dmlkZW8vbXA0:ARYZ8fga4_2hxEgNmXgdS32R3GuR8dQd8vm3gjUFBcuElX8WL4ZLPoptxy4WmbIZkcDDR_qoODbek4tk2Yn689xSfPn3-miCqUjV6Tuf7aOvwg:e:1779599988:1351699463683696:61589707094577:ARYL_5DEF_qjonhP-Lc
+================================================================================
+[2026-05-20T05:19:51.761Z] ✅ Numeric Media ID obtained: 958283143684340
+================================================================================
+[2026-05-20T05:20:23.626Z] 🚀 CREATE TEMPLATE
+================================================================================
+[2026-05-20T05:20:23.627Z] 📋 REQUEST BODY:
+{
+  "name": "20may_test1",
+  "category": "MARKETING",
+  "language": "en",
+  "bodyText": "Video Marketing Testing ",
+  "footerText": "Jass Perfumes ",
+  "headerType": "VIDEO",
+  "headerText": null,
+  "headerMediaHandle": "4:YmlnLm1wNA==:dmlkZW8vbXA0:ARazdAZ3307uopOjnUx68qj6-6hCBhwMxH7rODfipu5_F0f8wBIUfKaLd9tMQOhMJ7XaOg_EZFBJaPhPEytwuLVZuiXfBl_f-q2n8eQ0oqcKVg:e:1779599987:1351699463683696:61589707094577:ARbLwgXd8U_ISyu8Swg\n4:YmlnLm1wNA==:dmlkZW8vbXA0:ARZ3jk12-kSLhg4mPQ1oBJ8VfY_mYQrw9eSXxbSqctgmIuxJztk_KN2zs3jSdSj00k5_mNrY3nzysF7iSYIDM8KUIcYNk0QTH-_KJR_u8Ol7Vg:e:1779599988:1351699463683696:61589707094577:ARYy4cdBEPIqcVUKtAc\n4:YmlnLm1wNA==:dmlkZW8vbXA0:ARZcgthihX40i8UnGaT93gqWEuHBld32RUVf0etisk_hw6LjWHMMR_3EEYG_silaRurv_uXL87rMM18mh0mG3BI_qXiWJlXljXZpFoDepq2FcQ:e:1779599988:1351699463683696:61589707094577:ARaMjlRTclHHuSkGPT8\n4:YmlnLm1wNA==:dmlkZW8vbXA0:ARar0FVPIn_gk4F_YPL55ZQHm1q4FJE0uICw2pl2VyMEtUoIpIGgBGglHWEfoqjAHErFUaebKRKC2RopN60Wz06TEpwqmI42TxwgTG77uumorQ:e:1779599988:1351699463683696:61589707094577:ARYpnD59-4dkviKPTYU\n4:YmlnLm1wNA==:dmlkZW8vbXA0:ARZlqlVWgKmaw4LcJU24J5mCmo5bcjOOawSvQU1Ga1z-OYCnxYhf9g-Db2nynf9ZKJUqRDQPyND61akSUMJxbuMbcKgJ-r7sVu8lFy8ZB5gIzA:e:1779599988:1351699463683696:61589707094577:ARbm8ly8xB6XwV9iXz8\n4:YmlnLm1wNA==:dmlkZW8vbXA0:ARZppvTt_Io3gqm5iYnn9GF4yYnxv4ol8bsZ6QyGSvV6kGmOsydvVPbAiX5A0_M_unBxFmVpaJLiLRvQzRvsFVSN8V5I_hWI-z7EAmmjSH94Xg:e:1779599988:1351699463683696:61589707094577:ARYzt506P2lyXa75TkQ\n4:YmlnLm1wNA==:dmlkZW8vbXA0:ARY1EkEqUhJwGalrheR6zoEKfquCpLlHk09eC_KHrG7eozULwGgYgZatkIu10qiJGSoyKw8tECjyR3s3ZoR4wwhX8-YSJY-BO4iVLg22d3xsSQ:e:1779599988:1351699463683696:61589707094577:ARbVHdKu56t3-q--6h4\n4:YmlnLm1wNA==:dmlkZW8vbXA0:ARYZ8fga4_2hxEgNmXgdS32R3GuR8dQd8vm3gjUFBcuElX8WL4ZLPoptxy4WmbIZkcDDR_qoODbek4tk2Yn689xSfPn3-miCqUjV6Tuf7aOvwg:e:1779599988:1351699463683696:61589707094577:ARYL_5DEF_qjonhP-Lc",
+  "headerMediaId": "958283143684340",
+  "headerImageUrl": "http://localhost:3037/uploads/wa_1779254385873.mp4"
+}
+================================================================================
+[2026-05-20T05:20:23.628Z] 📤 SENDING TO META:
+{
+  "name": "20may_test1",
+  "category": "MARKETING",
+  "language": "en",
+  "components": [
+    {
+      "type": "HEADER",
+      "format": "VIDEO",
+      "example": {
+        "header_handle": [
+          "4:YmlnLm1wNA==:dmlkZW8vbXA0:ARazdAZ3307uopOjnUx68qj6-6hCBhwMxH7rODfipu5_F0f8wBIUfKaLd9tMQOhMJ7XaOg_EZFBJaPhPEytwuLVZuiXfBl_f-q2n8eQ0oqcKVg:e:1779599987:1351699463683696:61589707094577:ARbLwgXd8U_ISyu8Swg\n4:YmlnLm1wNA==:dmlkZW8vbXA0:ARZ3jk12-kSLhg4mPQ1oBJ8VfY_mYQrw9eSXxbSqctgmIuxJztk_KN2zs3jSdSj00k5_mNrY3nzysF7iSYIDM8KUIcYNk0QTH-_KJR_u8Ol7Vg:e:1779599988:1351699463683696:61589707094577:ARYy4cdBEPIqcVUKtAc\n4:YmlnLm1wNA==:dmlkZW8vbXA0:ARZcgthihX40i8UnGaT93gqWEuHBld32RUVf0etisk_hw6LjWHMMR_3EEYG_silaRurv_uXL87rMM18mh0mG3BI_qXiWJlXljXZpFoDepq2FcQ:e:1779599988:1351699463683696:61589707094577:ARaMjlRTclHHuSkGPT8\n4:YmlnLm1wNA==:dmlkZW8vbXA0:ARar0FVPIn_gk4F_YPL55ZQHm1q4FJE0uICw2pl2VyMEtUoIpIGgBGglHWEfoqjAHErFUaebKRKC2RopN60Wz06TEpwqmI42TxwgTG77uumorQ:e:1779599988:1351699463683696:61589707094577:ARYpnD59-4dkviKPTYU\n4:YmlnLm1wNA==:dmlkZW8vbXA0:ARZlqlVWgKmaw4LcJU24J5mCmo5bcjOOawSvQU1Ga1z-OYCnxYhf9g-Db2nynf9ZKJUqRDQPyND61akSUMJxbuMbcKgJ-r7sVu8lFy8ZB5gIzA:e:1779599988:1351699463683696:61589707094577:ARbm8ly8xB6XwV9iXz8\n4:YmlnLm1wNA==:dmlkZW8vbXA0:ARZppvTt_Io3gqm5iYnn9GF4yYnxv4ol8bsZ6QyGSvV6kGmOsydvVPbAiX5A0_M_unBxFmVpaJLiLRvQzRvsFVSN8V5I_hWI-z7EAmmjSH94Xg:e:1779599988:1351699463683696:61589707094577:ARYzt506P2lyXa75TkQ\n4:YmlnLm1wNA==:dmlkZW8vbXA0:ARY1EkEqUhJwGalrheR6zoEKfquCpLlHk09eC_KHrG7eozULwGgYgZatkIu10qiJGSoyKw8tECjyR3s3ZoR4wwhX8-YSJY-BO4iVLg22d3xsSQ:e:1779599988:1351699463683696:61589707094577:ARbVHdKu56t3-q--6h4\n4:YmlnLm1wNA==:dmlkZW8vbXA0:ARYZ8fga4_2hxEgNmXgdS32R3GuR8dQd8vm3gjUFBcuElX8WL4ZLPoptxy4WmbIZkcDDR_qoODbek4tk2Yn689xSfPn3-miCqUjV6Tuf7aOvwg:e:1779599988:1351699463683696:61589707094577:ARYL_5DEF_qjonhP-Lc"
+        ]
+      }
+    },
+    {
+      "type": "BODY",
+      "text": "Video Marketing Testing "
+    },
+    {
+      "type": "FOOTER",
+      "text": "Jass Perfumes "
+    }
+  ]
+}
+================================================================================
+[2026-05-20T05:20:23.628Z] 📡 META API CALL: POST https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-20T05:20:28.721Z] ✅ META API SUCCESS: POST https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-20T05:20:28.722Z] ✅ TEMPLATE CREATED: 20may_test1
+================================================================================
+[2026-05-20T05:20:28.771Z] ✅ Template saved to DB. Media handle: 4:YmlnLm1wNA==:dmlkZW8vbXA0:ARazdAZ3307uopOjnUx68qj6-6hCBhwMxH7rODfipu5_F0f8wBIUfKaLd9tMQOhMJ7XaOg_EZFBJaPhPEytwuLVZuiXfBl_f-q2n8eQ0oqcKVg:e:1779599987:1351699463683696:61589707094577:ARbLwgXd8U_ISyu8Swg
+4:YmlnLm1wNA==:dmlkZW8vbXA0:ARZ3jk12-kSLhg4mPQ1oBJ8VfY_mYQrw9eSXxbSqctgmIuxJztk_KN2zs3jSdSj00k5_mNrY3nzysF7iSYIDM8KUIcYNk0QTH-_KJR_u8Ol7Vg:e:1779599988:1351699463683696:61589707094577:ARYy4cdBEPIqcVUKtAc
+4:YmlnLm1wNA==:dmlkZW8vbXA0:ARZcgthihX40i8UnGaT93gqWEuHBld32RUVf0etisk_hw6LjWHMMR_3EEYG_silaRurv_uXL87rMM18mh0mG3BI_qXiWJlXljXZpFoDepq2FcQ:e:1779599988:1351699463683696:61589707094577:ARaMjlRTclHHuSkGPT8
+4:YmlnLm1wNA==:dmlkZW8vbXA0:ARar0FVPIn_gk4F_YPL55ZQHm1q4FJE0uICw2pl2VyMEtUoIpIGgBGglHWEfoqjAHErFUaebKRKC2RopN60Wz06TEpwqmI42TxwgTG77uumorQ:e:1779599988:1351699463683696:61589707094577:ARYpnD59-4dkviKPTYU
+4:YmlnLm1wNA==:dmlkZW8vbXA0:ARZlqlVWgKmaw4LcJU24J5mCmo5bcjOOawSvQU1Ga1z-OYCnxYhf9g-Db2nynf9ZKJUqRDQPyND61akSUMJxbuMbcKgJ-r7sVu8lFy8ZB5gIzA:e:1779599988:1351699463683696:61589707094577:ARbm8ly8xB6XwV9iXz8
+4:YmlnLm1wNA==:dmlkZW8vbXA0:ARZppvTt_Io3gqm5iYnn9GF4yYnxv4ol8bsZ6QyGSvV6kGmOsydvVPbAiX5A0_M_unBxFmVpaJLiLRvQzRvsFVSN8V5I_hWI-z7EAmmjSH94Xg:e:1779599988:1351699463683696:61589707094577:ARYzt506P2lyXa75TkQ
+4:YmlnLm1wNA==:dmlkZW8vbXA0:ARY1EkEqUhJwGalrheR6zoEKfquCpLlHk09eC_KHrG7eozULwGgYgZatkIu10qiJGSoyKw8tECjyR3s3ZoR4wwhX8-YSJY-BO4iVLg22d3xsSQ:e:1779599988:1351699463683696:61589707094577:ARbVHdKu56t3-q--6h4
+4:YmlnLm1wNA==:dmlkZW8vbXA0:ARYZ8fga4_2hxEgNmXgdS32R3GuR8dQd8vm3gjUFBcuElX8WL4ZLPoptxy4WmbIZkcDDR_qoODbek4tk2Yn689xSfPn3-miCqUjV6Tuf7aOvwg:e:1779599988:1351699463683696:61589707094577:ARYL_5DEF_qjonhP-Lc, Media ID: 958283143684340, Media URL: http://localhost:3037/uploads/wa_1779254385873.mp4
+================================================================================
+[2026-05-20T05:20:28.777Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-20T05:20:28.778Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-20T05:20:29.275Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-20T05:26:30.778Z] 🚀 UPLOAD MEDIA
+================================================================================
+[2026-05-20T05:26:31.121Z] ✅ Media saved publicly: http://localhost:3037/uploads/wa_1779254790779.mp4
+================================================================================
+[2026-05-20T05:26:31.466Z] 📡 Upload session created: upload:MTphdHRhY2htZW50OjdkNDQ5OWI0LWJjNjQtNDFhOC1iODg2LTIxZDY0OTkxOGFkNz9maWxlX25hbWU9bG93Lm1wNCZmaWxlX2xlbmd0aD03MzI5MjAmZmlsZV90eXBlPXZpZGVvJTJGbXA0?sig=ARbkf0ncQxIS6JR1Rkw
+================================================================================
+[2026-05-20T05:26:33.519Z] ✅ Media handle obtained: 4:bG93Lm1wNA==:dmlkZW8vbXA0:ARa-dc3SuSV2HtTZMmxOlBUGMGUvwpKBeilJBQfYE5q1-zBqjSQdorVXqfDJCH95ihx5qAp_sWkE83m_j6lhg3vS1WyocFiLO00iWLU4jaDE3A:e:1779600393:1351699463683696:61589707094577:ARZPgqYVql5A7Nu7GuY
+================================================================================
+[2026-05-20T05:26:36.925Z] ✅ Numeric Media ID obtained: 2447768995686288
+================================================================================
+[2026-05-20T05:27:09.083Z] 🚀 CREATE TEMPLATE
+================================================================================
+[2026-05-20T05:27:09.084Z] 📋 REQUEST BODY:
+{
+  "name": "20may_test2",
+  "category": "MARKETING",
+  "language": "en",
+  "bodyText": "Gif Testing",
+  "footerText": "Jass Perfumes",
+  "headerType": "VIDEO",
+  "headerText": null,
+  "headerMediaHandle": "4:bG93Lm1wNA==:dmlkZW8vbXA0:ARa-dc3SuSV2HtTZMmxOlBUGMGUvwpKBeilJBQfYE5q1-zBqjSQdorVXqfDJCH95ihx5qAp_sWkE83m_j6lhg3vS1WyocFiLO00iWLU4jaDE3A:e:1779600393:1351699463683696:61589707094577:ARZPgqYVql5A7Nu7GuY",
+  "headerMediaId": "2447768995686288",
+  "headerImageUrl": "http://localhost:3037/uploads/wa_1779254790779.mp4"
+}
+================================================================================
+[2026-05-20T05:27:09.087Z] 📤 SENDING TO META:
+{
+  "name": "20may_test2",
+  "category": "MARKETING",
+  "language": "en",
+  "components": [
+    {
+      "type": "HEADER",
+      "format": "VIDEO",
+      "example": {
+        "header_handle": [
+          "4:bG93Lm1wNA==:dmlkZW8vbXA0:ARa-dc3SuSV2HtTZMmxOlBUGMGUvwpKBeilJBQfYE5q1-zBqjSQdorVXqfDJCH95ihx5qAp_sWkE83m_j6lhg3vS1WyocFiLO00iWLU4jaDE3A:e:1779600393:1351699463683696:61589707094577:ARZPgqYVql5A7Nu7GuY"
+        ]
+      }
+    },
+    {
+      "type": "BODY",
+      "text": "Gif Testing"
+    },
+    {
+      "type": "FOOTER",
+      "text": "Jass Perfumes"
+    }
+  ]
+}
+================================================================================
+[2026-05-20T05:27:09.100Z] 📡 META API CALL: POST https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-20T05:27:14.969Z] ✅ META API SUCCESS: POST https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-20T05:27:14.970Z] ✅ TEMPLATE CREATED: 20may_test2
+================================================================================
+[2026-05-20T05:27:14.999Z] ✅ Template saved to DB. Media handle: 4:bG93Lm1wNA==:dmlkZW8vbXA0:ARa-dc3SuSV2HtTZMmxOlBUGMGUvwpKBeilJBQfYE5q1-zBqjSQdorVXqfDJCH95ihx5qAp_sWkE83m_j6lhg3vS1WyocFiLO00iWLU4jaDE3A:e:1779600393:1351699463683696:61589707094577:ARZPgqYVql5A7Nu7GuY, Media ID: 2447768995686288, Media URL: http://localhost:3037/uploads/wa_1779254790779.mp4
+================================================================================
+[2026-05-20T05:27:15.007Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-20T05:27:15.009Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-20T05:27:15.323Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-20T05:30:44.661Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-20T05:30:44.672Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-20T05:30:45.323Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-20T06:22:53.322Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-20T06:22:53.355Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-20T06:22:54.216Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-20T06:29:56.830Z] 🚀 CREATE TEMPLATE
+================================================================================
+[2026-05-20T06:29:56.831Z] 📋 REQUEST BODY:
+{
+  "name": "20may_test5",
+  "category": "MARKETING",
+  "language": "en",
+  "bodyText": "Use Coupon Code : Techorses2025  For 50% Off On All Orders Today.",
+  "footerText": "Jass Perfumes , Visit Store today",
+  "headerType": "TEXT",
+  "headerText": "Jass Offer",
+  "headerMediaHandle": null,
+  "headerMediaId": null,
+  "headerImageUrl": null,
+  "buttons": [
+    {
+      "type": "URL",
+      "text": "Visit",
+      "url": "https://techorses.com"
+    },
+    {
+      "type": "PHONE_NUMBER",
+      "text": "Call Us",
+      "phone_number": "+916354662208"
+    },
+    {
+      "type": "QUICK_REPLY",
+      "text": "STOP"
+    }
+  ]
+}
+================================================================================
+[2026-05-20T06:29:56.832Z] 📤 SENDING TO META:
+"{\n  \"name\": \"20may_test5\",\n  \"category\": \"MARKETING\",\n  \"language\": \"en\",\n  \"components\": [\n    {\n      \"type\": \"HEADER\",\n      \"format\": \"TEXT\",\n      \"text\": \"Jass Offer\"\n    },\n    {\n      \"type\": \"BODY\",\n      \"text\": \"Use Coupon Code : Techorses2025  For 50% Off On All Orders Today.\"\n    },\n    {\n      \"type\": \"FOOTER\",\n      \"text\": \"Jass Perfumes , Visit Store today\"\n    },\n    {\n      \"type\": \"BUTTONS\",\n      \"buttons\": [\n        {\n          \"type\": \"URL\",\n          \"text\": \"Visit\",\n          \"url\": \"https://techorses.com\"\n        },\n        {\n          \"type\": \"PHONE_NUMBER\",\n          \"text\": \"Call Us\",\n          \"phone_number\": \"+916354662208\"\n        },\n        {\n          \"type\": \"QUICK_REPLY\",\n          \"text\": \"STOP\"\n        }\n      ]\n    }\n  ]\n}"
+================================================================================
+[2026-05-20T06:29:56.833Z] 📡 META API CALL: POST https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-20T06:30:04.696Z] ✅ META API SUCCESS: POST https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-20T06:30:04.697Z] ✅ TEMPLATE CREATED: 20may_test5
+================================================================================
+[2026-05-20T06:30:04.810Z] ✅ Template saved to DB with buttons
+================================================================================
+[2026-05-20T06:30:04.818Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-20T06:30:04.819Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-20T06:30:05.607Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-20T06:30:31.259Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-20T06:30:31.265Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-20T06:30:32.049Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-20T11:04:42.999Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-20T11:04:43.030Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-20T11:04:43.876Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-20T11:06:34.547Z] 🚀 CREATE TEMPLATE
+================================================================================
+[2026-05-20T11:06:34.548Z] 📋 REQUEST BODY:
+{
+  "name": "order_confirmation",
+  "category": "UTILITY",
+  "language": "en",
+  "bodyText": "Hello\n\nHii",
+  "footerText": null,
+  "headerType": "NONE",
+  "headerText": null,
+  "headerMediaHandle": null,
+  "headerMediaId": null,
+  "headerImageUrl": null,
+  "buttons": []
+}
+================================================================================
+[2026-05-20T11:06:34.549Z] 📤 SENDING TO META:
+"{\n  \"name\": \"order_confirmation\",\n  \"category\": \"UTILITY\",\n  \"language\": \"en\",\n  \"components\": [\n    {\n      \"type\": \"BODY\",\n      \"text\": \"Hello\\n\\nHii\"\n    }\n  ]\n}"
+================================================================================
+[2026-05-20T11:06:34.550Z] 📡 META API CALL: POST https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-20T11:06:39.537Z] ✅ META API SUCCESS: POST https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-20T11:06:39.538Z] ✅ TEMPLATE CREATED: order_confirmation
+================================================================================
+[2026-05-20T11:06:39.587Z] ✅ Template saved to DB with buttons
+================================================================================
+[2026-05-20T11:06:39.592Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-20T11:06:39.592Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-20T11:06:42.332Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-20T11:07:11.016Z] 🚀 DELETE TEMPLATE: order_confirmation
+================================================================================
+[2026-05-20T11:07:11.018Z] 📡 META API CALL: DELETE https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-20T11:07:14.327Z] ✅ META API SUCCESS: DELETE https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-20T11:07:14.806Z] ✅ Template deleted from database: order_confirmation
+================================================================================
+[2026-05-20T11:07:14.811Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-20T11:07:14.812Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-20T11:07:15.212Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-20T11:07:58.403Z] 🚀 DELETE TEMPLATE: j_ss
+================================================================================
+[2026-05-20T11:07:58.404Z] 📡 META API CALL: DELETE https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-20T11:08:00.692Z] ✅ META API SUCCESS: DELETE https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-20T11:08:00.732Z] ✅ Template deleted from database: j_ss
+================================================================================
+[2026-05-20T11:08:00.738Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-20T11:08:00.739Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-20T11:08:01.285Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-20T12:34:34.552Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-20T12:34:36.393Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-20T12:34:38.295Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-20T12:41:08.711Z] 🚀 CREATE TEMPLATE
+================================================================================
+[2026-05-20T12:41:08.712Z] 📋 REQUEST BODY:
+{
+  "name": "order",
+  "category": "UTILITY",
+  "language": "en",
+  "bodyText": "Hey {{1}}  ,\nYour {{2}} is Confirmed.",
+  "footerText": "Jass ",
+  "headerType": "TEXT",
+  "headerText": "Order Information",
+  "headerMediaHandle": null,
+  "headerMediaId": null,
+  "headerImageUrl": null,
+  "buttons": []
+}
+================================================================================
+[2026-05-20T12:41:08.713Z] 📤 SENDING TO META:
+"{\n  \"name\": \"order\",\n  \"category\": \"UTILITY\",\n  \"language\": \"en\",\n  \"components\": [\n    {\n      \"type\": \"HEADER\",\n      \"format\": \"TEXT\",\n      \"text\": \"Order Information\"\n    },\n    {\n      \"type\": \"BODY\",\n      \"text\": \"Hey {{1}}  ,\\nYour {{2}} is Confirmed.\",\n      \"example\": {\n        \"body_text\": [\n          [\n            \"example\",\n            \"example\"\n          ]\n        ]\n      }\n    },\n    {\n      \"type\": \"FOOTER\",\n      \"text\": \"Jass \"\n    }\n  ]\n}"
+================================================================================
+[2026-05-20T12:41:08.713Z] 📡 META API CALL: POST https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-20T12:41:12.424Z] ❌ META API ERROR: POST https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-20T12:41:12.425Z] 🚨 DETAILS:
+{
+  "error": {
+    "message": "Invalid parameter",
+    "type": "OAuthException",
+    "code": 100,
+    "error_subcode": 2388023,
+    "is_transient": false,
+    "error_user_title": "Message template language is being deleted",
+    "error_user_msg": "New English content can't be added while the existing English content is being deleted. Try again in 4 weeks or consider creating a new message template.",
+    "fbtrace_id": "AVtEsyB7kxGXDz61-kD8OC1"
+  }
+}
+================================================================================
+[2026-05-20T12:41:12.425Z] ❌ TEMPLATE CREATION FAILED: order
+================================================================================
+[2026-05-20T12:42:34.404Z] 🚀 CREATE TEMPLATE
+================================================================================
+[2026-05-20T12:42:34.405Z] 📋 REQUEST BODY:
+{
+  "name": "order_info",
+  "category": "UTILITY",
+  "language": "en",
+  "bodyText": "Hey {{1}}  ,\nYour {{2}} is Confirmed.",
+  "footerText": "Jass ",
+  "headerType": "TEXT",
+  "headerText": "Order Information",
+  "headerMediaHandle": null,
+  "headerMediaId": null,
+  "headerImageUrl": null,
+  "buttons": []
+}
+================================================================================
+[2026-05-20T12:42:34.405Z] 📤 SENDING TO META:
+"{\n  \"name\": \"order_info\",\n  \"category\": \"UTILITY\",\n  \"language\": \"en\",\n  \"components\": [\n    {\n      \"type\": \"HEADER\",\n      \"format\": \"TEXT\",\n      \"text\": \"Order Information\"\n    },\n    {\n      \"type\": \"BODY\",\n      \"text\": \"Hey {{1}}  ,\\nYour {{2}} is Confirmed.\",\n      \"example\": {\n        \"body_text\": [\n          [\n            \"example\",\n            \"example\"\n          ]\n        ]\n      }\n    },\n    {\n      \"type\": \"FOOTER\",\n      \"text\": \"Jass \"\n    }\n  ]\n}"
+================================================================================
+[2026-05-20T12:42:34.406Z] 📡 META API CALL: POST https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-20T12:42:42.911Z] ✅ META API SUCCESS: POST https://graph.facebook.com/v25.0/2463910244034087/message_templates
+================================================================================
+[2026-05-20T12:42:42.912Z] ✅ TEMPLATE CREATED: order_info
+================================================================================
+[2026-05-20T12:42:42.958Z] ✅ Template saved to DB with buttons
+================================================================================
+[2026-05-20T12:42:42.964Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-20T12:42:42.965Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-20T12:42:44.606Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-20T12:43:39.521Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-20T12:43:39.522Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-20T12:43:41.573Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-20T12:44:19.265Z] 🚀 GET TEMPLATE: jass_jass
+================================================================================
+[2026-05-20T12:44:19.265Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?name=jass_jass
+================================================================================
+[2026-05-20T12:44:20.043Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?name=jass_jass
+================================================================================
+[2026-05-20T12:44:24.640Z] 🚀 GET TEMPLATE: jass_today
+================================================================================
+[2026-05-20T12:44:24.641Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?name=jass_today
+================================================================================
+[2026-05-20T12:44:25.192Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?name=jass_today
+================================================================================
+[2026-05-20T12:44:27.800Z] 🚀 GET TEMPLATE: jass_jass
+================================================================================
+[2026-05-20T12:44:27.801Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?name=jass_jass
+================================================================================
+[2026-05-20T12:44:28.384Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?name=jass_jass
+================================================================================
+[2026-05-20T12:44:45.541Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-20T12:44:45.542Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-20T12:44:46.967Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-20T12:45:35.029Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-20T12:45:35.030Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-20T12:45:36.073Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-20T12:46:56.038Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-20T12:46:56.039Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-20T12:46:58.018Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-20T13:12:37.338Z] 🚀 GET ALL TEMPLATES
+================================================================================
+[2026-05-20T13:12:39.183Z] 📡 META API CALL: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
+[2026-05-20T13:12:39.688Z] ✅ META API SUCCESS: GET https://graph.facebook.com/v25.0/2463910244034087/message_templates?limit=100
+================================================================================
