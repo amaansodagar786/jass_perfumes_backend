@@ -60,7 +60,7 @@ cron.schedule("0 0 1 1 *", async () => {
 
 // Basic Route
 app.get('/', (req, res) => {
-  res.send('New World from Jass Inventory Backend new LIVE UPDATED!');
+  res.send('New World from Jass Inventory Backend new LIVE whatsapp UPDATED!');
 });
 
 // ✅ CREATE HTTP SERVER WITH SOCKET.IO
