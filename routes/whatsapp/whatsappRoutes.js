@@ -205,43 +205,31 @@ router.get("/webhook/meta", (req, res) => {
     return res.sendStatus(403);
 });
 
-// ========================================
-// WEBHOOK RECEIVER - WITH UNSUBSCRIBE DETECTION
-// ========================================
 router.post("/webhook/meta", async (req, res) => {
-
     writeLog("🚨🚨🚨 POST WEBHOOK CALLED 🚨🚨🚨");
     writeLog("📋 REQUEST HEADERS", req.headers);
     writeLog("📦 REQUEST BODY", req.body);
-
     res.sendStatus(200);
     writeLog("✅ Sent 200 response to Meta");
-
     try {
         const body = req.body;
-
         if (!body?.entry?.[0]?.changes?.[0]?.value) {
             writeLog("⚠️ No valid data in webhook payload");
             return;
         }
-
         const value = body.entry[0].changes[0].value;
         const message = value.messages?.[0];
         const status = value.statuses?.[0];
-
         writeLog("📨 Extracted from payload", { hasMessage: !!message, hasStatus: !!status });
-
         // ========================================
         // INCOMING CUSTOMER MESSAGE
         // ========================================
         if (message) {
             writeLog("🔄 PROCESSING INCOMING CUSTOMER MESSAGE");
             writeLog("📱 Raw message object", message);
-
             const customerPhone = message.from;
             let customerMessage = "";
             let messageType = "text";
-
             if (message.type === "text") {
                 customerMessage = message.text?.body || "";
                 messageType = "text";
@@ -264,11 +252,9 @@ router.post("/webhook/meta", async (req, res) => {
                 customerMessage = `📨 ${message.type} message received`;
                 messageType = message.type;
             }
-
             writeLog(`📞 Customer Phone: ${customerPhone}`);
             writeLog(`💬 Message: ${customerMessage}`);
             writeLog(`📎 Type: ${messageType}`);
-
             // ========================================
             // UNSUBSCRIBE DETECTION - CRITICAL!
             // ========================================
@@ -276,10 +262,8 @@ router.post("/webhook/meta", async (req, res) => {
             const isUnsubscribe = stopKeywords.some(keyword =>
                 customerMessage.toLowerCase().includes(keyword)
             );
-
             if (isUnsubscribe) {
                 writeLog(`🚨 UNSUBSCRIBE DETECTED for ${customerPhone}`);
-
                 await Unsubscribe.findOneAndUpdate(
                     { phone: customerPhone },
                     {
@@ -290,10 +274,7 @@ router.post("/webhook/meta", async (req, res) => {
                     },
                     { upsert: true }
                 );
-
                 writeLog(`✅ User ${customerPhone} added to unsubscribe list`);
-
-                // Send confirmation message
                 try {
                     await axios.post(
                         `https://graph.facebook.com/v23.0/${process.env.WHATSAPP_PHONE_NUMBER_ID}/messages`,
@@ -315,13 +296,11 @@ router.post("/webhook/meta", async (req, res) => {
                     writeLog(`❌ Failed to send confirmation: ${sendError.message}`);
                 }
             }
-
             // ========================================
             // BUTTON CLICK DETECTION
             // ========================================
             if (message.type === "button" && message.button?.text?.toLowerCase().includes("stop")) {
                 writeLog(`🚨 STOP BUTTON CLICKED for ${customerPhone}`);
-
                 await Unsubscribe.findOneAndUpdate(
                     { phone: customerPhone },
                     {
@@ -332,15 +311,12 @@ router.post("/webhook/meta", async (req, res) => {
                     },
                     { upsert: true }
                 );
-
                 writeLog(`✅ User ${customerPhone} unsubscribed via STOP button`);
             }
-
             // ========================================
             // CONVERSATION HANDLING
             // ========================================
             let conversation = await Conversation.findOne({ customerPhone });
-
             if (!conversation) {
                 writeLog("🆕 Creating new conversation...");
                 conversation = new Conversation({
@@ -355,11 +331,8 @@ router.post("/webhook/meta", async (req, res) => {
             } else {
                 writeLog(`✅ Existing conversation found: ${conversation.conversationId}`);
             }
-
-            // Save message to database (skip if unsubscribe message to avoid clutter)
             if (!isUnsubscribe) {
                 writeLog("💾 Saving message to database...");
-
                 const savedMessage = new Message({
                     conversationId: conversation.conversationId,
                     senderType: "customer",
@@ -368,11 +341,8 @@ router.post("/webhook/meta", async (req, res) => {
                     whatsappMessageId: message.id,
                     messageStatus: "delivered"
                 });
-
                 await savedMessage.save();
                 writeLog(`✅✅✅ MESSAGE SUCCESSFULLY SAVED! ID: ${savedMessage.messageId}`);
-
-                // SOCKET.IO EMISSION
                 const io = req.app.get('io');
                 if (io) {
                     io.emit('new-message', {
@@ -382,7 +352,6 @@ router.post("/webhook/meta", async (req, res) => {
                     });
                     writeLog("📡 Socket.io event emitted to frontend");
                 }
-
                 await Conversation.findOneAndUpdate(
                     { conversationId: conversation.conversationId },
                     {
@@ -391,28 +360,37 @@ router.post("/webhook/meta", async (req, res) => {
                         $inc: { unreadCount: 1 }
                     }
                 );
-
                 writeLog("✅ Conversation lastMessage updated");
             }
-
             writeLog("🎉 ========== MESSAGE PROCESSING COMPLETE ==========");
         }
-
         // ========================================
         // MESSAGE STATUS UPDATE
         // ========================================
         if (status) {
             writeLog("🔄 PROCESSING STATUS UPDATE");
             writeLog(`📊 Status: ${status.status} for message: ${status.id}`);
+            writeLog(`📦 Full status object:`, status);
+
+            const updateData = { messageStatus: status.status };
+
+            if (status.errors && status.errors.length > 0) {
+                updateData.errorCode = status.errors[0].code;
+                updateData.errorMessage = status.errors[0].title;
+
+                const errorLogEntry = `[${new Date().toISOString()}] FAILED MESSAGE\nPhone: ${status.recipient_id}\nCode: ${status.errors[0].code}\nReason: ${status.errors[0].title}\nMessage ID: ${status.id}\n${"=".repeat(80)}\n`;
+                fs.appendFileSync("/tmp/whatsapp_failed_messages.log", errorLogEntry);
+
+                writeLog(`❌ FAILED REASON — Code: ${status.errors[0].code} | Reason: ${status.errors[0].title}`);
+            }
 
             await Message.findOneAndUpdate(
                 { whatsappMessageId: status.id },
-                { messageStatus: status.status }
+                updateData
             );
 
             writeLog("✅ Status updated successfully");
         }
-
     } catch (error) {
         writeLog("❌❌❌ CRITICAL WEBHOOK ERROR ❌❌❌");
         writeLog(`Error message: ${error.message}`);

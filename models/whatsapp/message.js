@@ -45,6 +45,16 @@ const messageSchema = new mongoose.Schema({
         default: "sent"
     },
 
+    errorCode: {
+        type: Number,
+        default: null
+    },
+
+    errorMessage: {
+        type: String,
+        default: null
+    },
+
     timestamp: {
         type: Date,
         default: Date.now
