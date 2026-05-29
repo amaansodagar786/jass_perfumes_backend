@@ -85,6 +85,9 @@ async function sendTemplateToCustomer(customerPhone, templateName, language = "e
             requestData.template.components = components;
         }
 
+        // LOG EXACT PAYLOAD GOING TO META
+        writeLog(`📤 Sending to ${customerPhone}`, requestData);
+
         const response = await axios.post(
             `https://graph.facebook.com/v19.0/${process.env.WHATSAPP_PHONE_NUMBER_ID}/messages`,
             requestData,
@@ -96,11 +99,16 @@ async function sendTemplateToCustomer(customerPhone, templateName, language = "e
             }
         );
 
+        // LOG META RESPONSE
+        writeLog(`✅ Meta response for ${customerPhone}`, response.data);
+
         return {
             success: true,
             messageId: response.data.messages?.[0]?.id,
         };
     } catch (error) {
+        // LOG EXACT ERROR
+        writeLog(`❌ Failed for ${customerPhone}`, error.response?.data || error.message);
         return {
             success: false,
             error: error.response?.data || error.message
@@ -322,8 +330,8 @@ router.post("/send-to-customers", async (req, res) => {
 
         writeLog(`📊 Total: ${customers.length}, Valid: ${validCustomers.length}, Unsubscribed: ${skippedUnsubscribed.length}`);
 
-        const BATCH_SIZE = 2;
-        const BATCH_DELAY = 3000; // 3 seconds
+        const BATCH_SIZE = 1;
+        // const BATCH_DELAY = 3000; 
 
         const results = [];
         let successCount = 0;
@@ -378,10 +386,15 @@ router.post("/send-to-customers", async (req, res) => {
                 }
             }
 
-            // 3 second wait after each batch — last batch ke baad nahi
+            // Random delay between 1-10 seconds after each customer
             if (i + BATCH_SIZE < validCustomers.length) {
-                writeLog(`⏳ Waiting ${BATCH_DELAY}ms before next batch...`);
-                await new Promise(resolve => setTimeout(resolve, BATCH_DELAY));
+                const randomDelay = (Math.floor(Math.random() * 9) + 7) * 1000;
+
+                writeLog(
+                    `⏳ Waiting ${randomDelay / 1000} seconds before next customer...`
+                );
+
+                await new Promise(resolve => setTimeout(resolve, randomDelay));
             }
         }
 
