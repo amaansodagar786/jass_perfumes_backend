@@ -322,8 +322,8 @@ router.post("/send-to-customers", async (req, res) => {
 
         writeLog(`📊 Total: ${customers.length}, Valid: ${validCustomers.length}, Unsubscribed: ${skippedUnsubscribed.length}`);
 
-        const BATCH_SIZE = 10;
-        const BATCH_DELAY = 2000;
+        const BATCH_SIZE = 2;
+        const BATCH_DELAY = 3000; // 3 seconds
 
         const results = [];
         let successCount = 0;
@@ -336,63 +336,56 @@ router.post("/send-to-customers", async (req, res) => {
 
             writeLog(`📦 Processing Batch ${batchNumber}/${totalBatches} (${batch.length} messages)`);
 
-            const concurrencyLimit = 5;
-            for (let j = 0; j < batch.length; j += concurrencyLimit) {
-                const concurrentBatch = batch.slice(j, j + concurrencyLimit);
+            // NO concurrency — one by one bhejo
+            for (const customer of batch) {
+                const sendResult = await sendTemplateToCustomer(
+                    customer.phone,
+                    templateName,
+                    language,
+                    parameters,
+                    headerParameter,
+                    headerType
+                );
 
-                const batchPromises = concurrentBatch.map(async (customer) => {
-                    const sendResult = await sendTemplateToCustomer(
-                        customer.phone,
-                        templateName,
-                        language,
-                        parameters,
-                        headerParameter,
-                        headerType
+                if (sendResult.success) {
+                    const conversation = await Conversation.findOneAndUpdate(
+                        { customerPhone: customer.phone },
+                        {
+                            $setOnInsert: {
+                                customerName: customer.name || customer.phone,
+                                customerPhone: customer.phone,
+                            },
+                            $set: {
+                                lastMessage: `Template: ${templateName}`,
+                                lastMessageTime: new Date()
+                            }
+                        },
+                        { upsert: true, new: true }
                     );
 
-                    if (sendResult.success) {
-                        // ✅ FIX: Use findOneAndUpdate with upsert instead of getOrCreateConversation
-                        // This is atomic — no race condition possible
-                        const conversation = await Conversation.findOneAndUpdate(
-                            { customerPhone: customer.phone },
-                            {
-                                $setOnInsert: {
-                                    customerName: customer.name || customer.phone,
-                                    customerPhone: customer.phone,
-                                },
-                                $set: {
-                                    lastMessage: `Template: ${templateName}`,
-                                    lastMessageTime: new Date()
-                                }
-                            },
-                            { upsert: true, new: true }
-                        );
+                    await saveMessageToDB(
+                        conversation.conversationId,
+                        templateName,
+                        sendResult.messageId,
+                        "sent"
+                    );
 
-                        await saveMessageToDB(
-                            conversation.conversationId,
-                            templateName,
-                            sendResult.messageId,
-                            "sent"
-                        );
-
-                        successCount++;
-                        return { ...customer, success: true, messageId: sendResult.messageId };
-                    } else {
-                        failCount++;
-                        return { ...customer, success: false, error: sendResult.error };
-                    }
-                });
-
-                const batchResults = await Promise.all(batchPromises);
-                results.push(...batchResults);
+                    successCount++;
+                    results.push({ ...customer, success: true, messageId: sendResult.messageId });
+                } else {
+                    failCount++;
+                    results.push({ ...customer, success: false, error: sendResult.error });
+                }
             }
 
+            // 3 second wait after each batch — last batch ke baad nahi
             if (i + BATCH_SIZE < validCustomers.length) {
                 writeLog(`⏳ Waiting ${BATCH_DELAY}ms before next batch...`);
                 await new Promise(resolve => setTimeout(resolve, BATCH_DELAY));
             }
         }
 
+        // Add skipped unsubscribed users to results
         for (const skipped of skippedUnsubscribed) {
             results.push({
                 ...skipped,
