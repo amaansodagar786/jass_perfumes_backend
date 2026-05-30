@@ -1615,3 +1615,246 @@
 ================================================================================
 [2026-05-29T13:25:30.871Z] ✅ COMPLETED: Success: 3, Failed: 0, Skipped: 0
 ================================================================================
+[2026-05-30T04:54:27.301Z] 🚀 GET WHATSAPP USERS API CALLED
+================================================================================
+[2026-05-30T04:54:27.526Z] 🚀 GET APPROVED TEMPLATES API CALLED
+================================================================================
+[2026-05-30T04:54:55.357Z] 🚀 SEND TEMPLATE TO CUSTOMERS API CALLED
+================================================================================
+[2026-05-30T04:54:55.513Z] 📊 Total: 5, Valid: 5, Unsubscribed: 0
+================================================================================
+[2026-05-30T04:54:55.514Z] 📦 Processing Batch 1/5 (1 messages)
+================================================================================
+[2026-05-30T04:54:55.515Z] 📤 Sending to 7878908999
+{
+  "messaging_product": "whatsapp",
+  "to": "7878908999",
+  "type": "template",
+  "template": {
+    "name": "invitation_testing_template",
+    "language": {
+      "code": "en"
+    },
+    "components": [
+      {
+        "type": "header",
+        "parameters": [
+          {
+            "type": "image",
+            "image": {
+              "id": "1377181410901932"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
+================================================================================
+[2026-05-30T04:54:56.262Z] ✅ Meta response for 7878908999
+{
+  "messaging_product": "whatsapp",
+  "contacts": [
+    {
+      "input": "7878908999",
+      "wa_id": "917878908999"
+    }
+  ],
+  "messages": [
+    {
+      "id": "wamid.HBgMOTE3ODc4OTA4OTk5FQIAERgSMUI0NDFDQjEyM0U5MDEwODQ5AA==",
+      "message_status": "accepted"
+    }
+  ]
+}
+================================================================================
+[2026-05-30T04:54:56.346Z] ⏳ Waiting 30 seconds before next customer...
+================================================================================
+[2026-05-30T04:55:26.359Z] 📦 Processing Batch 2/5 (1 messages)
+================================================================================
+[2026-05-30T04:55:26.360Z] 📤 Sending to 9687657878
+{
+  "messaging_product": "whatsapp",
+  "to": "9687657878",
+  "type": "template",
+  "template": {
+    "name": "invitation_testing_template",
+    "language": {
+      "code": "en"
+    },
+    "components": [
+      {
+        "type": "header",
+        "parameters": [
+          {
+            "type": "image",
+            "image": {
+              "id": "1377181410901932"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
+================================================================================
+[2026-05-30T04:55:27.540Z] ✅ Meta response for 9687657878
+{
+  "messaging_product": "whatsapp",
+  "contacts": [
+    {
+      "input": "9687657878",
+      "wa_id": "919687657878"
+    }
+  ],
+  "messages": [
+    {
+      "id": "wamid.HBgMOTE5Njg3NjU3ODc4FQIAERgSMzg4MEQ5QzY3ODNFQkVGRkNBAA==",
+      "message_status": "accepted"
+    }
+  ]
+}
+================================================================================
+[2026-05-30T04:55:27.596Z] ⏳ Waiting 30 seconds before next customer...
+================================================================================
+[2026-05-30T04:55:57.605Z] 📦 Processing Batch 3/5 (1 messages)
+================================================================================
+[2026-05-30T04:55:57.606Z] 📤 Sending to 9712029659
+{
+  "messaging_product": "whatsapp",
+  "to": "9712029659",
+  "type": "template",
+  "template": {
+    "name": "invitation_testing_template",
+    "language": {
+      "code": "en"
+    },
+    "components": [
+      {
+        "type": "header",
+        "parameters": [
+          {
+            "type": "image",
+            "image": {
+              "id": "1377181410901932"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
+================================================================================
+[2026-05-30T04:55:58.836Z] ✅ Meta response for 9712029659
+{
+  "messaging_product": "whatsapp",
+  "contacts": [
+    {
+      "input": "9712029659",
+      "wa_id": "919712029659"
+    }
+  ],
+  "messages": [
+    {
+      "id": "wamid.HBgMOTE5NzEyMDI5NjU5FQIAERgSRTU1NkE3MUY0MTA0OTFCMDJBAA==",
+      "message_status": "accepted"
+    }
+  ]
+}
+================================================================================
+[2026-05-30T04:55:58.893Z] ⏳ Waiting 30 seconds before next customer...
+================================================================================
+[2026-05-30T04:56:28.901Z] 📦 Processing Batch 4/5 (1 messages)
+================================================================================
+[2026-05-30T04:56:28.902Z] 📤 Sending to 9265445164
+{
+  "messaging_product": "whatsapp",
+  "to": "9265445164",
+  "type": "template",
+  "template": {
+    "name": "invitation_testing_template",
+    "language": {
+      "code": "en"
+    },
+    "components": [
+      {
+        "type": "header",
+        "parameters": [
+          {
+            "type": "image",
+            "image": {
+              "id": "1377181410901932"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
+================================================================================
+[2026-05-30T04:56:30.175Z] ✅ Meta response for 9265445164
+{
+  "messaging_product": "whatsapp",
+  "contacts": [
+    {
+      "input": "9265445164",
+      "wa_id": "919265445164"
+    }
+  ],
+  "messages": [
+    {
+      "id": "wamid.HBgMOTE5MjY1NDQ1MTY0FQIAERgSMThGMTRGMEU3MjMwRjE5RkU0AA==",
+      "message_status": "accepted"
+    }
+  ]
+}
+================================================================================
+[2026-05-30T04:56:30.227Z] ⏳ Waiting 30 seconds before next customer...
+================================================================================
+[2026-05-30T04:57:00.229Z] 📦 Processing Batch 5/5 (1 messages)
+================================================================================
+[2026-05-30T04:57:00.229Z] 📤 Sending to 9662268999
+{
+  "messaging_product": "whatsapp",
+  "to": "9662268999",
+  "type": "template",
+  "template": {
+    "name": "invitation_testing_template",
+    "language": {
+      "code": "en"
+    },
+    "components": [
+      {
+        "type": "header",
+        "parameters": [
+          {
+            "type": "image",
+            "image": {
+              "id": "1377181410901932"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
+================================================================================
+[2026-05-30T04:57:01.438Z] ✅ Meta response for 9662268999
+{
+  "messaging_product": "whatsapp",
+  "contacts": [
+    {
+      "input": "9662268999",
+      "wa_id": "919662268999"
+    }
+  ],
+  "messages": [
+    {
+      "id": "wamid.HBgMOTE5NjYyMjY4OTk5FQIAERgSOUVGNDM5QjcxMDg5NUM3NEFFAA==",
+      "message_status": "accepted"
+    }
+  ]
+}
+================================================================================
+[2026-05-30T04:57:01.493Z] ✅ COMPLETED: Success: 5, Failed: 0, Skipped: 0
+================================================================================

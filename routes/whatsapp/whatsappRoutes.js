@@ -62,12 +62,9 @@ router.post("/create-conversation", async (req, res) => {
     }
 });
 
-// ========================================
-// GET ALL CONVERSATIONS
-// ========================================
 router.get("/get-conversations", async (req, res) => {
     try {
-        const conversations = await Conversation.find({}).sort({ updatedAt: -1 });
+        const conversations = await Conversation.find({}).sort({ lastMessageTime: -1 });
         res.status(200).json({
             success: true,
             data: conversations
@@ -221,15 +218,26 @@ router.post("/webhook/meta", async (req, res) => {
         const message = value.messages?.[0];
         const status = value.statuses?.[0];
         writeLog("📨 Extracted from payload", { hasMessage: !!message, hasStatus: !!status });
+
         // ========================================
         // INCOMING CUSTOMER MESSAGE
         // ========================================
         if (message) {
             writeLog("🔄 PROCESSING INCOMING CUSTOMER MESSAGE");
             writeLog("📱 Raw message object", message);
-            const customerPhone = message.from;
+
+            const rawPhone = message.from;
+
+            // ✅ FIX 1: Normalize phone — strip leading 91 for Indian numbers
+            const normalizedPhone = rawPhone.startsWith('91') && rawPhone.length === 12
+                ? rawPhone.substring(2)
+                : rawPhone;
+
+            writeLog(`📞 Raw Phone: ${rawPhone} → Normalized: ${normalizedPhone}`);
+
             let customerMessage = "";
             let messageType = "text";
+
             if (message.type === "text") {
                 customerMessage = message.text?.body || "";
                 messageType = "text";
@@ -252,35 +260,38 @@ router.post("/webhook/meta", async (req, res) => {
                 customerMessage = `📨 ${message.type} message received`;
                 messageType = message.type;
             }
-            writeLog(`📞 Customer Phone: ${customerPhone}`);
+
             writeLog(`💬 Message: ${customerMessage}`);
             writeLog(`📎 Type: ${messageType}`);
+
             // ========================================
-            // UNSUBSCRIBE DETECTION - CRITICAL!
+            // UNSUBSCRIBE DETECTION
             // ========================================
             const stopKeywords = ["stop", "unsubscribe", "unsub", "stop marketing", "stop promotions"];
             const isUnsubscribe = stopKeywords.some(keyword =>
                 customerMessage.toLowerCase().includes(keyword)
             );
+
             if (isUnsubscribe) {
-                writeLog(`🚨 UNSUBSCRIBE DETECTED for ${customerPhone}`);
+                writeLog(`🚨 UNSUBSCRIBE DETECTED for ${normalizedPhone}`);
+                // Save both normalized and raw phone to catch all variants
                 await Unsubscribe.findOneAndUpdate(
-                    { phone: customerPhone },
+                    { phone: normalizedPhone },
                     {
-                        phone: customerPhone,
+                        phone: normalizedPhone,
                         reason: "STOP",
                         unsubscribedAt: new Date(),
                         isActive: true
                     },
                     { upsert: true }
                 );
-                writeLog(`✅ User ${customerPhone} added to unsubscribe list`);
+                writeLog(`✅ User ${normalizedPhone} added to unsubscribe list`);
                 try {
                     await axios.post(
                         `https://graph.facebook.com/v23.0/${process.env.WHATSAPP_PHONE_NUMBER_ID}/messages`,
                         {
                             messaging_product: "whatsapp",
-                            to: customerPhone,
+                            to: rawPhone, // send back to raw phone (Meta needs it with 91)
                             type: "text",
                             text: { body: "✅ You have been unsubscribed from marketing messages. You will still receive order updates and important notifications." }
                         },
@@ -291,37 +302,41 @@ router.post("/webhook/meta", async (req, res) => {
                             }
                         }
                     );
-                    writeLog(`📧 Sent unsubscribe confirmation to ${customerPhone}`);
+                    writeLog(`📧 Sent unsubscribe confirmation to ${rawPhone}`);
                 } catch (sendError) {
                     writeLog(`❌ Failed to send confirmation: ${sendError.message}`);
                 }
             }
+
             // ========================================
             // BUTTON CLICK DETECTION
             // ========================================
             if (message.type === "button" && message.button?.text?.toLowerCase().includes("stop")) {
-                writeLog(`🚨 STOP BUTTON CLICKED for ${customerPhone}`);
+                writeLog(`🚨 STOP BUTTON CLICKED for ${normalizedPhone}`);
                 await Unsubscribe.findOneAndUpdate(
-                    { phone: customerPhone },
+                    { phone: normalizedPhone },
                     {
-                        phone: customerPhone,
+                        phone: normalizedPhone,
                         reason: "STOP_BUTTON",
                         unsubscribedAt: new Date(),
                         isActive: true
                     },
                     { upsert: true }
                 );
-                writeLog(`✅ User ${customerPhone} unsubscribed via STOP button`);
+                writeLog(`✅ User ${normalizedPhone} unsubscribed via STOP button`);
             }
+
             // ========================================
             // CONVERSATION HANDLING
             // ========================================
-            let conversation = await Conversation.findOne({ customerPhone });
+            // ✅ FIX 1: Search by normalizedPhone only — no more duplicate conversations
+            let conversation = await Conversation.findOne({ customerPhone: normalizedPhone });
+
             if (!conversation) {
                 writeLog("🆕 Creating new conversation...");
                 conversation = new Conversation({
-                    customerName: customerPhone,
-                    customerPhone: customerPhone,
+                    customerName: normalizedPhone,
+                    customerPhone: normalizedPhone,
                     lastMessage: customerMessage,
                     lastMessageTime: new Date(),
                     unreadCount: 1
@@ -331,6 +346,7 @@ router.post("/webhook/meta", async (req, res) => {
             } else {
                 writeLog(`✅ Existing conversation found: ${conversation.conversationId}`);
             }
+
             if (!isUnsubscribe) {
                 writeLog("💾 Saving message to database...");
                 const savedMessage = new Message({
@@ -343,27 +359,33 @@ router.post("/webhook/meta", async (req, res) => {
                 });
                 await savedMessage.save();
                 writeLog(`✅✅✅ MESSAGE SUCCESSFULLY SAVED! ID: ${savedMessage.messageId}`);
+
                 const io = req.app.get('io');
                 if (io) {
                     io.emit('new-message', {
                         conversationId: conversation.conversationId,
                         message: savedMessage,
-                        customerPhone: customerPhone
+                        customerPhone: normalizedPhone
                     });
                     writeLog("📡 Socket.io event emitted to frontend");
                 }
+
+                // ✅ FIX 2: Add updatedAt so sort by lastMessageTime works correctly
                 await Conversation.findOneAndUpdate(
                     { conversationId: conversation.conversationId },
                     {
                         lastMessage: customerMessage,
                         lastMessageTime: new Date(),
+                        updatedAt: new Date(),
                         $inc: { unreadCount: 1 }
                     }
                 );
                 writeLog("✅ Conversation lastMessage updated");
             }
+
             writeLog("🎉 ========== MESSAGE PROCESSING COMPLETE ==========");
         }
+
         // ========================================
         // MESSAGE STATUS UPDATE
         // ========================================
@@ -391,6 +413,7 @@ router.post("/webhook/meta", async (req, res) => {
 
             writeLog("✅ Status updated successfully");
         }
+
     } catch (error) {
         writeLog("❌❌❌ CRITICAL WEBHOOK ERROR ❌❌❌");
         writeLog(`Error message: ${error.message}`);

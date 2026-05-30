@@ -386,9 +386,8 @@ router.post("/send-to-customers", async (req, res) => {
                 }
             }
 
-            // Random delay between 1-10 seconds after each customer
             if (i + BATCH_SIZE < validCustomers.length) {
-                const randomDelay = (Math.floor(Math.random() * 9) + 7) * 1000;
+                const randomDelay = (Math.floor(Math.random() * 6) + 7) * 1000;
 
                 writeLog(
                     `⏳ Waiting ${randomDelay / 1000} seconds before next customer...`
@@ -396,6 +395,7 @@ router.post("/send-to-customers", async (req, res) => {
 
                 await new Promise(resolve => setTimeout(resolve, randomDelay));
             }
+
         }
 
         // Add skipped unsubscribed users to results
