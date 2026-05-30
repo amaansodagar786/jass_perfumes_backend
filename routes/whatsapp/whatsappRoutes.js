@@ -228,7 +228,7 @@ router.post("/webhook/meta", async (req, res) => {
 
             const rawPhone = message.from;
 
-            // ✅ FIX 1: Normalize phone — strip leading 91 for Indian numbers
+            // ✅ Normalize phone — strip leading 91 for Indian numbers
             const normalizedPhone = rawPhone.startsWith('91') && rawPhone.length === 12
                 ? rawPhone.substring(2)
                 : rawPhone;
@@ -255,10 +255,10 @@ router.post("/webhook/meta", async (req, res) => {
                 messageType = "document";
             } else if (message.type === "button") {
                 customerMessage = message.button?.text || "Button clicked";
-                messageType = "button";
+                messageType = "text"; // ✅ button not in enum — use text
             } else {
                 customerMessage = `📨 ${message.type} message received`;
-                messageType = message.type;
+                messageType = "text"; // ✅ safe fallback for unknown types
             }
 
             writeLog(`💬 Message: ${customerMessage}`);
@@ -274,7 +274,6 @@ router.post("/webhook/meta", async (req, res) => {
 
             if (isUnsubscribe) {
                 writeLog(`🚨 UNSUBSCRIBE DETECTED for ${normalizedPhone}`);
-                // Save both normalized and raw phone to catch all variants
                 await Unsubscribe.findOneAndUpdate(
                     { phone: normalizedPhone },
                     {
@@ -291,7 +290,7 @@ router.post("/webhook/meta", async (req, res) => {
                         `https://graph.facebook.com/v23.0/${process.env.WHATSAPP_PHONE_NUMBER_ID}/messages`,
                         {
                             messaging_product: "whatsapp",
-                            to: rawPhone, // send back to raw phone (Meta needs it with 91)
+                            to: rawPhone,
                             type: "text",
                             text: { body: "✅ You have been unsubscribed from marketing messages. You will still receive order updates and important notifications." }
                         },
@@ -329,7 +328,6 @@ router.post("/webhook/meta", async (req, res) => {
             // ========================================
             // CONVERSATION HANDLING
             // ========================================
-            // ✅ FIX 1: Search by normalizedPhone only — no more duplicate conversations
             let conversation = await Conversation.findOne({ customerPhone: normalizedPhone });
 
             if (!conversation) {
@@ -370,7 +368,6 @@ router.post("/webhook/meta", async (req, res) => {
                     writeLog("📡 Socket.io event emitted to frontend");
                 }
 
-                // ✅ FIX 2: Add updatedAt so sort by lastMessageTime works correctly
                 await Conversation.findOneAndUpdate(
                     { conversationId: conversation.conversationId },
                     {
